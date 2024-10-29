@@ -1,7 +1,139 @@
-/*
-    home.css: This website contains selectors only used in home.css
+.home-container {/* Ajusta según sea necesario */
+    padding-top: 25vh;
+}
 
-    All pages share the styles on index.css but you should create 
-    one more css for each page that will contain the selected used 
-    on that page only (the ones not reused in other pages).
-*/
+.home-contai{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.18);
+    max-width: 1100px;
+    margin: auto;
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid rgb(105, 105, 105);
+}
+
+.home-titulo, .home-texto {
+    color: white; /* Cambia el color según tu diseño */
+    font-family: "DM Serif Display", serif;
+    font-size: 2rem;
+    line-height: 45px;
+}
+
+.home-titulo{
+    font-size: 4.5rem;
+    font-weight: bold;
+}
+
+.home-full {
+    font-size: 2.5rem; /* Ajusta el tamaño según sea necesario */
+    background: linear-gradient(to right, #ff7e29, #ff2600); /* Color gradiente */
+    -webkit-background-clip: text; /* Hace que el fondo se aplique al texto */
+    -webkit-text-fill-color: transparent; /* Hace que el color del texto sea transparente */
+    font-family: "DM Serif Display", serif;
+    font-weight: 500;
+}
+
+.home-con1 p, .home-con1 h2 {
+    display: inline; /* Asegura que ambos estén en la misma línea */
+}
+
+.home-bienvenido {
+    color: white;
+    border: 1px solid white;
+    padding: 8px 12px;
+    background-color: rgb(0, 0, 0);
+    font-size: .8rem;
+    width: 11.3rem;
+    margin-bottom: 1rem;
+}
+
+.home-con1{
+    width: 600px;
+    height: auto;
+}
+
+.home-con2 {
+    background: linear-gradient(to right, #ff7e29, #ff2600);
+    width: 320px; /* Ancho del contenedor */
+    height: 320px; /* Alto del contenedor */
+    border-radius: 50%; /* Hace que el contenedor sea circular */
+    display: flex; /* Usar flexbox para centrar la imagen */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    overflow: hidden; /* Ocultar cualquier parte de la imagen que sobresalga */
+}
+
+.home-perfil{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-button {
+    background: linear-gradient(to right, #ff7e29, #ff2600); /* Color naranja brillante */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 30px; /* Bordes redondeados */
+    padding: 8px 20px; /* Espaciado interno */
+    font-size: 1rem; /* Tamaño de la fuente */
+    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+    margin-top: 2rem; /* Espacio arriba del botón */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* Sombra blanca */
+}
+
+/* Efecto al pasar el mouse */
+.contact-button:hover {
+    background-color: #e65c00; /* Un tono más oscuro al pasar el mouse */
+}
+
+
+.cursor {
+    font-weight: bold;
+    color: #ff6600; /* El mismo color naranja */
+    animation: blink 1s step-end infinite; /* Añade una animación para parpadeo */
+    font-size: 2.5rem;
+}
+
+.foto-perfil {
+    width: 100%; /* Ocupa el 100% del ancho del contenedor */
+    height: 100%; /* Ocupa el 100% del alto del contenedor */
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
+    border-radius: 50%; /* Opcional: hace que la imagen sea circular */
+    margin: 27px 0 0 35px;
+}
+
+.home-redes {
+    display: flex; /* Para que los iconos se alineen horizontalmente */
+    justify-content: space-around; /* Espacio uniforme entre los iconos */
+    margin-top: 20px; /* Espacio entre el contenido y los iconos */
+}
+
+.icon-container {
+    background-color: rgb(0, 0, 0); /* Fondo blanco */
+    border-radius: 50%; /* Hace que el contenedor sea circular */
+    display: flex; /* Para centrar la imagen */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    width: 40px; /* Ajusta el tamaño según sea necesario */
+    height: 40px; /* Ajusta el tamaño según sea necesario */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Sombra ligera para dar profundidad */
+    margin: 0 10px; /* Espacio entre los iconos */
+    transition: transform 0.3s; /* Transición suave al escalar */
+}
+
+.redes-icono {
+    color: rgb(221, 221, 221); /* Color negro para el icono */
+    width: 90%; /* Ajusta el tamaño según sea necesario */
+    height: 90%; /* Ajusta el tamaño según sea necesario */
+}
+
+.redes-icono:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+}
+
+.home-intro{
+    color: white;
+    font-size: 1rem;
+    margin-top: 1rem;
+    font-weight: normal;
+}

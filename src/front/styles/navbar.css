@@ -1,0 +1,64 @@
+/* Estilos base para la navbar */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: .7rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.18); /* Fondo inicial transparente */
+    color: white; /* Color inicial de texto */
+    border-bottom: 1px solid rgb(105, 105, 105);
+}
+
+/* Clase para el fondo cuando la navbar se vuelve fija */
+.navbar-scrolled {
+    background: linear-gradient(to right, #ff7e29, #ff2600); /* Naranja vibrante */
+}
+
+/* Logo y estilos de enlace */
+.navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-logo a {
+    text-decoration: none;
+}
+
+.logo-white {
+    color: white;
+}
+
+.logo-orange {
+    background: linear-gradient(to right, #ff7e29, #ff2600);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Estilo de los enlaces */
+.navbar-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    transition: color 0.2s ease;
+    font-size: 15px;
+}
+
+/* Color de los enlaces al pasar el mouse por encima */
+.navbar-links a:hover {
+    color: #ff6600; /* Naranja brillante al pasar el mouse */
+}
+
+/* Color de hover para los enlaces cuando el navbar está en scroll */
+.navbar-scrolled .navbar-links a:hover {
+    color: black; /* Negro al pasar el mouse */
+}
