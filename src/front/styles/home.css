@@ -11,6 +11,23 @@
     padding: 2.5rem;
     border-radius: 20px;
     border: 1px solid rgb(105, 105, 105);
+    animation: slideIn 1s ease forwards;
+    opacity: 0; /* Inicialmente invisible */
+}
+
+.home-contai.fade-in {
+    opacity: 1; /* Cuando la clase está activa, el elemento se vuelve visible */
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-10%) scale(0.9); /* Empieza fuera de la pantalla a la izquierda y más pequeño */
+        opacity: 0; /* Totalmente transparente */
+    }
+    100% {
+        transform: translateX(0) scale(1); /* Termina en su posición original y tamaño normal */
+        opacity: 1; /* Totalmente visible */
+    }
 }
 
 .home-titulo, .home-texto {
@@ -62,6 +79,20 @@
     justify-content: center; /* Centrar horizontalmente */
     align-items: center; /* Centrar verticalmente */
     overflow: hidden; /* Ocultar cualquier parte de la imagen que sobresalga */
+    animation: float 2s ease-in-out infinite; 
+    box-shadow: 0 0 20px rgba(255, 126, 41, 2);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0); /* Posición inicial */
+    }
+    50% {
+        transform: translateY(-10px); /* Sube 10 píxeles */
+    }
+    100% {
+        transform: translateY(0); /* Vuelve a la posición inicial */
+    }
 }
 
 .home-perfil{
@@ -136,4 +167,15 @@
     font-size: 1rem;
     margin-top: 1rem;
     font-weight: normal;
+}
+
+.fade-in-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-element.visible {
+    opacity: 1;
+    transform: translateY(0);
 }

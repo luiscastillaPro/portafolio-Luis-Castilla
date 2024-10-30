@@ -12,6 +12,18 @@
     background-color: rgba(255, 255, 255, 0.18); /* Fondo inicial transparente */
     color: white; /* Color inicial de texto */
     border-bottom: 1px solid rgb(105, 105, 105);
+    animation: slideIn 1s ease forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-10%) scale(0.9); /* Empieza fuera de la pantalla a la izquierda y más pequeño */
+        opacity: 0; /* Totalmente transparente */
+    }
+    100% {
+        transform: translateX(0) scale(1); /* Termina en su posición original y tamaño normal */
+        opacity: 1; /* Totalmente visible */
+    }
 }
 
 /* Clase para el fondo cuando la navbar se vuelve fija */
