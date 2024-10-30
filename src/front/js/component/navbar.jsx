@@ -13,20 +13,25 @@ const Navbar = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Esto proporciona un desplazamiento suave
+        });
+    };
+
     return (
         <nav className={`navbar ${isScrolled ? "navbar-scrolled" : ""}`}>
             <div className="navbar-logo">
-            <a href="#home"> {/* Cambiado a un ancla */}
-                    <span className="logo-white">Luis</span>
-                    <span className={isScrolled ? "logo-black" : "logo-orange"}>
-                        coded.
-                    </span>
-                </a>
+                <span className="logo-white">Luis</span>
+                <span className={isScrolled ? "logo-black" : "logo-orange"}>
+                    coded.
+                </span>
             </div>
             <div className="navbar-links">
-                <a href="#home">Home</a>
+                <a href="#home" onClick={scrollToTop}>Home</a> {/* Llama a scrollToTop al hacer clic */}
                 <a href="#servicios">Servicios</a>
-                <a href="#skills">Skills</a> {/* Cambiado a un ancla que apunta al id "skills" */}
+                <a href="#skills">Skills</a>
                 <a href="#proyectos">Proyectos</a>
                 <a href="#contacto">Contacto</a>
             </div>

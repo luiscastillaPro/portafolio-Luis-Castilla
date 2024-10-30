@@ -3,6 +3,7 @@ import "../../styles/home.css";
 import foto from "../../img/foto.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub, faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
 import Skills from "../pages/Skills.js";
 
 const Home = () => {
@@ -117,6 +118,9 @@ const Home = () => {
                         </a>
                     </div>
                 </div>
+            </div>
+			<div className="scroll-indicator">
+                <FontAwesomeIcon icon={faAngleDoubleDown} className="down-arrow" />
             </div>
             <section id="skills">
                 <Skills />

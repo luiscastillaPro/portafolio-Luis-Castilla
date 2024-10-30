@@ -179,3 +179,26 @@
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Estilos para el icono de desplazamiento hacia abajo */
+.scroll-indicator {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    margin-top: 10rem; /* Espacio encima del icono */
+}
+
+.down-arrow {
+    color: white; /* Color blanco para el icono */
+    font-size: 2rem; /* Tamaño del icono */
+    animation: bounce 1s infinite; /* Añadir animación de rebote */
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* Posición inicial */
+    }
+    50% {
+        transform: translateY(-10px); /* Rebote hacia arriba */
+    }
+}
