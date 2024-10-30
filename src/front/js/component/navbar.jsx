@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import "../../styles/navbar.css";
 
 const Navbar = () => {
@@ -17,17 +16,19 @@ const Navbar = () => {
     return (
         <nav className={`navbar ${isScrolled ? "navbar-scrolled" : ""}`}>
             <div className="navbar-logo">
-                <Link to="/">
+            <a href="#home"> {/* Cambiado a un ancla */}
                     <span className="logo-white">Luis</span>
-                    <span className="logo-orange">coded.</span>
-                </Link>
+                    <span className={isScrolled ? "logo-black" : "logo-orange"}>
+                        coded.
+                    </span>
+                </a>
             </div>
             <div className="navbar-links">
-                <Link to="/">Home</Link>
-                <Link to="/servicios">Servicios</Link>
-                <Link to="/habilidades">Skills</Link>
-                <Link to="/proyectos">Proyectos</Link>
-                <Link to="/contacto">Contacto</Link>
+                <a href="#home">Home</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#skills">Skills</a> {/* Cambiado a un ancla que apunta al id "skills" */}
+                <a href="#proyectos">Proyectos</a>
+                <a href="#contacto">Contacto</a>
             </div>
         </nav>
     );

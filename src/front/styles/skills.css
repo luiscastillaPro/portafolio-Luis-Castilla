@@ -1,0 +1,74 @@
+.skills-container {
+    padding: 20px;
+    text-align: center;
+    display: flex; /* Centro la tabla en el contenedor */
+    justify-content: center;
+    flex-direction: column; /* Esto permite que el título también esté centrado */
+    align-items: center;
+    margin-top: 22vh;
+}
+
+.skills-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-family: "DM Serif Display", serif;
+    color: white;
+
+}
+
+.skill-cont-table{
+    background-color: rgba(255, 255, 255, 0.18);
+    max-width: 900px;
+    padding: 1.5rem;
+    border-radius: 20px;
+    border: 1px solid rgb(105, 105, 105);
+}
+
+.skills-table {
+    border-collapse: separate;
+    border-spacing: 30px;
+}
+
+.skills-table td {
+    border: 1px solid white;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    height: 140px;
+    width: 120px;
+    position: relative; /* Necesario para el posicionamiento relativo */
+    overflow: hidden; /* Para ocultar el texto que se sale del área */
+}
+
+.skill-item {
+    text-align: center; /* Centrar el contenido */
+    position: relative;
+}
+
+.skills-table img {
+    width: 100%; /* Asegúrate de que la imagen ocupe todo el ancho de la celda */
+    height: 100%; /* Asegúrate de que la imagen ocupe todo el alto de la celda */
+    object-fit: contain; /* Mantiene la relación de aspecto de la imagen */
+}
+
+.skill-text {
+    display: block; /* Asegúrate de que se trate como un bloque */
+    position: absolute; /* Para posicionar sobre la imagen */
+    bottom: -30px; /* Fuera de la vista inicialmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translateX(-50%); /* Ajuste para centrar */
+    opacity: 0; /* Oculto inicialmente */
+    transition: bottom 0.5s ease, opacity 0.5s ease; /* Transiciones suaves */
+    font-weight: bold;
+    background: black;
+    color: white;
+    padding: 10% 50%;
+    margin-bottom: 10%;
+}
+
+/* Mostrar texto al pasar el mouse */
+.skills-table td:hover .skill-text {
+    bottom: 1px; /* Mover hacia arriba */
+    opacity: 1; /* Hacer visible */
+}

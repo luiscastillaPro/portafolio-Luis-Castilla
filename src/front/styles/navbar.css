@@ -39,6 +39,11 @@
     -webkit-text-fill-color: transparent;
 }
 
+/* Nueva clase para el logo negro */
+.logo-black {
+    color: black; /* Cambia a negro cuando se hace scroll */
+}
+
 /* Estilo de los enlaces */
 .navbar-links {
     display: flex;
