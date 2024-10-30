@@ -86,7 +86,7 @@ const Home = () => {
                         Apasionado por la programación y desarrollo web, con experiencia en tecnologías como HTML, CSS, JavaScript, React, Node.js, Python, SQL, SQLAlchemy, Bootstrap, Git, GitHub, Flask, Authentication JWT y Jest.
                     </h6>
                     <div>
-                        <a href="/CV_Luis_Castilla.pdf" download="CV_Luis_Castilla.pdf">
+                        <a href="https://drive.google.com/uc?export=download&id=1FJXKzgC5stMr66OCcgYsFG_EoLXDuz9U" download="CV_Luis_Castilla.pdf">
                             <button className="contact-button fade-in-element">Descargar CV</button>
                         </a>
                     </div>
