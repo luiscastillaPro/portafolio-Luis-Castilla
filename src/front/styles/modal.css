@@ -1,0 +1,40 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px; /* Ajusta el tamaño del modal según sea necesario */
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    float: right;
+}
+
+.info-button {
+    background: none;
+    color: #ff6600;
+    border: none; /* Sin borde */
+    text-decoration: none;
+    font-size: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+.info-button:hover {
+    transform: scale(1.12); 
+  }

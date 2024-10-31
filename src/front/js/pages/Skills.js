@@ -1,20 +1,20 @@
 import React, { useEffect } from "react";
 import "../../styles/skills.css";
-import html from "../../img/html-logo.png";
-import css from "../../img/css-logo.png";
-import javascript from "../../img/javascript-logo.png";
-import react from "../../img/react-logo.png";
-import node from "../../img/node-logo.png"; 
-import git from "../../img/git-logo.png"; 
-import github from "../../img/github-logo.png";
-import bootstrap from "../../img/bootstrap-logo.png";
-import python from "../../img/python-logo.png";
-import sql from "../../img/sql-logo.png";
-import flask from "../../img/flask-logo.png"; 
-import jwt from "../../img/jwt-logo.png";
-import figma from "../../img/figma-logo.png";
-import canva from "../../img/canva-logo.png";
-import wordpress from "../../img/wordpress-logo.png";
+import html from "../../img/skills/html-logo.png";
+import css from "../../img/skills/css-logo.png";
+import javascript from "../../img/skills/javascript-logo.png";
+import react from "../../img/skills/react-logo.png";
+import node from "../../img/skills/node-logo.png"; 
+import git from "../../img/skills/git-logo.png"; 
+import github from "../../img/skills/github-logo.png";
+import bootstrap from "../../img/skills/bootstrap-logo.png";
+import python from "../../img/skills/python-logo.png";
+import sql from "../../img/skills/sql-logo.png";
+import flask from "../../img/skills/flask-logo.png"; 
+import jwt from "../../img/skills/jwt-logo.png";
+import figma from "../../img/skills/figma-logo.png";
+import canva from "../../img/skills/canva-logo.png";
+import wordpress from "../../img/skills/wordpress-logo.png";
 
 const Skills = () => {
     useEffect(() => {

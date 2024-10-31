@@ -1,0 +1,154 @@
+.proyecto-card {
+  width: 600px;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+.proyecto-titul {
+  font-size: 2rem;
+  color: #ff6600;
+  margin: 0 0 10px 0;
+  font-weight: 600; /* Estilo de título más audaz */
+  font-family: "DM Serif Display", serif;
+  margin-left: 15rem;
+}
+
+.proyecto-descrip {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Carrusel de imágenes */
+.proyecto-carrusel {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.proyecto-imagen {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid black;
+}
+
+/* Botones de navegación del carrusel */
+.proyecto-carrusel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Mantener centrado verticalmente */
+  background: rgba(0, 0, 0, 0); /* Fondo transparente */
+  color: #ff6600;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 3.5rem;
+  border-radius: 4px; /* Bordes redondeados */
+  animation: moveButton 0.7s ease-in-out infinite; /* Movimiento continuo */
+}
+
+/* Botón de la izquierda */
+.proyecto-carrusel button:first-of-type {
+  left: -15px;
+}
+
+/* Botón de la derecha */
+.proyecto-carrusel button:last-of-type {
+  right: -15px;
+}
+
+/* Animación para movimiento continuo */
+@keyframes moveButton {
+  0%, 100% {
+      transform: translateY(-50%) translateX(0); /* Posición inicial y final */
+  }
+  50% {
+      transform: translateY(-50%) translateX(-5px); /* Mover a la izquierda en la mitad de la animación */
+  }
+}
+
+/* Botones para ver sitio en live y código */
+.proyecto-botones {
+  display: flex;
+  justify-content: space-around; /* Espacio uniforme entre botones */
+  margin-top: 10px;
+}
+
+.proyecto-boton3,
+.proyecto-boton4 {
+  background: linear-gradient(to right, #ff7e29, #ff2600);
+  color: white;
+  border: none; /* Sin borde */
+  text-decoration: none;
+  padding: 8px 20px;/* Aumentar el padding para botones más grandes */
+  border-radius: 30px;
+  font-size: 1rem;
+  text-align: center; /* Centrar texto */
+  display: inline-block; /* Para que el padding y el texto se alineen correctamente */
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+}
+
+.proyecto-boton3:hover {
+  transform: scale(1.05); /* Efecto de escalado en hover */
+  color: black;
+}
+
+.proyecto-boton4:hover {
+  transform: scale(1.05); /* Efecto de escalado en hover */
+  color: black;
+}
+
+.proyecto-sin {
+  color: red;
+  font-weight: bold;
+  animation: fadeIn 0.5s ease; /* Animación de entrada */
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* Estilo para los círculos */
+.circulos {
+  display: flex; /* Usamos flexbox para alinear los círculos */
+  justify-content: center; /* Centrar horizontalmente */
+  margin: 10px 0; /* Espaciado vertical */
+}
+
+.circulo {
+  width: 12px; /* Ancho de los círculos */
+  height: 12px; /* Alto de los círculos */
+  border-radius: 50%; /* Hacerlos circulares */
+  background-color: #ccc; /* Color por defecto */
+  margin: 0 5px; /* Espaciado entre círculos */
+  transition: background-color 0.3s ease; /* Suave transición al cambiar de color */
+}
+
+.circulo.activo {
+  background-color: #ff6600; /* Color para el círculo activo */
+}
+
+.proyecto-informativo{
+  display: flex;
+  justify-content: space-between;
+}
+
+.iconito{
+  margin-bottom: 10px;
+}

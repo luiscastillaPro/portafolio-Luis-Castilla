@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub, faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
 import Skills from "../pages/Skills.js";
+import Proyectos from "./proyectos.js";
 
 const Home = () => {
     const [displayText, setDisplayText] = useState("");
@@ -124,6 +125,12 @@ const Home = () => {
             </div>
             <section id="skills">
                 <Skills />
+            </section>
+            <div className="scroll-indicator">
+                <FontAwesomeIcon icon={faAngleDoubleDown} className="down-arrow" />
+            </div>
+            <section id="Proyectos">
+                <Proyectos />
             </section>
         </div>
     );
