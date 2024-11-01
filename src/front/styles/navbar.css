@@ -64,18 +64,29 @@
 
 .navbar-links a {
     text-decoration: none;
-    color: inherit;
     font-weight: bold;
-    transition: color 0.2s ease;
+    color: white;
+    transition: color 0.2s ease, border-bottom 0.2s ease;
     font-size: 15px;
+    position: relative; /* Necesario para posicionar el borde */
+    box-sizing: border-box;/* Añade un poco de espacio para el borde */
+    border-bottom: 0.3rem solid transparent; 
+    cursor: pointer;
 }
 
 /* Color de los enlaces al pasar el mouse por encima */
 .navbar-links a:hover {
     color: #ff6600; /* Naranja brillante al pasar el mouse */
+    border-bottom: 0.3rem solid #ff6600; /* Cambiar el color del borde en hover */
+}
+
+.navbar-links a.active {
+    color: black; /* Color cuando está activo */
+    border-bottom: 0.3rem solid black; /* Mantiene el borde activo */
 }
 
 /* Color de hover para los enlaces cuando el navbar está en scroll */
 .navbar-scrolled .navbar-links a:hover {
     color: black; /* Negro al pasar el mouse */
+    border-bottom: .3rem solid #000000;
 }

@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react"; 
 import "../../styles/navbar.css";
+import { Link, animateScroll as scroll } from "react-scroll";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -14,26 +16,64 @@ const Navbar = () => {
     }, []);
 
     const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth' // Esto proporciona un desplazamiento suave
-        });
+        scroll.scrollToTop({ duration: 500, smooth: true });
     };
 
     return (
         <nav className={`navbar ${isScrolled ? "navbar-scrolled" : ""}`}>
-            <div className="navbar-logo">
+            <div className="navbar-logo" onClick={scrollToTop}>
                 <span className="logo-white">Luis</span>
                 <span className={isScrolled ? "logo-black" : "logo-orange"}>
                     coded.
                 </span>
             </div>
             <div className="navbar-links">
-                <a href="#home" onClick={scrollToTop}>Home</a> {/* Llama a scrollToTop al hacer clic */}
-                <a href="#servicios">Servicios</a>
-                <a href="#skills">Skills</a>
-                <a href="#proyectos">Proyectos</a>
-                <a href="#contacto">Contacto</a>
+                <Link 
+                    to="home" 
+                    smooth={true} 
+                    duration={500} 
+                    onClick={scrollToTop}
+                    activeClass="active" 
+                    spy={true}
+                >
+                    Home
+                </Link>
+                <Link 
+                    to="servicios" 
+                    smooth={true} 
+                    duration={500}
+                    activeClass="active" 
+                    spy={true}
+                >
+                    Servicios
+                </Link>
+                <Link 
+                    to="skills" 
+                    smooth={true} 
+                    duration={500}
+                    activeClass="active" 
+                    spy={true}
+                >
+                    Skills
+                </Link>
+                <Link 
+                    to="proyectos" 
+                    smooth={true} 
+                    duration={500}
+                    activeClass="active" 
+                    spy={true}
+                >
+                    Proyectos
+                </Link>
+                <Link 
+                    to="contacto" 
+                    smooth={true} 
+                    duration={500}
+                    activeClass="active" 
+                    spy={true}
+                >
+                    Contacto
+                </Link>
             </div>
         </nav>
     );

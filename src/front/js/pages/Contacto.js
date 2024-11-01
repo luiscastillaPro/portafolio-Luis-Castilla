@@ -1,4 +1,3 @@
-// Contacto.js
 import React, { useEffect } from "react";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'; // Importando iconos de react-icons
 import "../../styles/contacto.css";
@@ -24,7 +23,7 @@ const Contacto = () => {
     }, []);
 
     return (
-        <div className="contacto-container fade-in">
+        <div id="contacto" className="contacto-container fade-in">
             <h2 className="contact-title">Contacto</h2>
             <div className="contacto-contin fade-in">
                 <div className="contact-info fade-in">
