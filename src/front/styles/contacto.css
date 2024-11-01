@@ -1,0 +1,107 @@
+/* contacto.css */
+
+.contacto-container {
+    color: white;
+    text-align: center;
+    padding-bottom: 10rem;
+}
+
+.contacto-contin {
+    padding: 2.5rem;
+    max-width: 1000px;
+    background-color: rgba(255, 255, 255, 0.18);
+    border-radius: 20px;
+    border: 1px solid rgb(105, 105, 105);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-info {
+    width: 40%;
+    padding: 5rem 0 0 1rem;
+}
+
+.contacto-ico {
+    color: #ff6600;
+    font-size: 1.5rem;
+}
+
+.contact-title {
+    font-size: 3rem;
+    margin: 3rem;
+    font-family: "DM Serif Display", serif;
+    color: white;
+    border-bottom: .4rem solid #ff6600;
+    display: inline-block;
+}
+
+.contact-detail {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.contact-detail p {
+    margin-left: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.contact-form {
+    width: 55%;
+    background-color: rgba(255, 255, 255, 0.18);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgb(105, 105, 105);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    /* Permitir cambiar tamaño verticalmente */
+    height: 100px;
+    /* Alto fijo para el textarea */
+}
+
+.error-message {
+    color: red;
+    /* Color de los mensajes de error */
+    font-size: 12px;
+    display: none;
+    /* Inicialmente ocultar mensajes de error */
+}
+
+.contact-form button {
+    padding: 10px 15px;
+    background: linear-gradient(to right, #ff7e29, #ff2600);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+}
+
+.contact-form button:hover {
+    transform: scale(1.01); /* Efecto de escalado en hover */
+    color: black;
+}

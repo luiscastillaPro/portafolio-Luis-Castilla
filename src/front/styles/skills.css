@@ -35,6 +35,7 @@
     margin-bottom: 20px;
     font-family: "DM Serif Display", serif;
     color: white;
+    border-bottom: .4rem solid #ff6600;
 }
 
 .skill-cont-table {

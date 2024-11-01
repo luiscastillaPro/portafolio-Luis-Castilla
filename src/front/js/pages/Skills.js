@@ -22,7 +22,7 @@ const Skills = () => {
             const fadeElements = document.querySelectorAll(".fade-in");
             fadeElements.forEach((element) => {
                 const rect = element.getBoundingClientRect();
-                if (rect.top < window.innerHeight - 100) {
+                if (rect.top < window.innerHeight - 150) {
                     element.classList.add("visible");
                 } else {
                     element.classList.remove("visible");

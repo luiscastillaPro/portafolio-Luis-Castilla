@@ -1,3 +1,4 @@
+/* Estilo base para .proyecto-card */
 .proyecto-card {
   width: 600px;
   height: auto;
@@ -7,6 +8,25 @@
   text-align: center;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   background-color: rgba(255, 255, 255, 0.18);
+  opacity: 0;
+  transform: translateX(-200px); /* Entrada desde la izquierda por defecto */
+  transition: opacity 1s ease, transform 2s ease;
+}
+
+/* Estilo cuando el elemento es visible */
+.proyecto-card.visible {
+  opacity: 1;
+  transform: translateX(0); /* Posición final una vez visible */
+}
+
+/* Estilo para .slide-right */
+.proyecto-card.slide-right {
+  transform: translateX(200px); /* Entrada desde la derecha */
+}
+
+.proyecto-card.slide-right.visible {
+  opacity: 1;
+  transform: translateX(0); /* Posición final una vez visible */
 }
 
 .proyecto-titul {
@@ -69,10 +89,10 @@
 /* Animación para movimiento continuo */
 @keyframes moveButton {
   0%, 100% {
-      transform: translateY(-50%) translateX(0); /* Posición inicial y final */
+    transform: translateY(-50%) translateX(0); /* Posición inicial y final */
   }
   50% {
-      transform: translateY(-50%) translateX(-5px); /* Mover a la izquierda en la mitad de la animación */
+    transform: translateY(-50%) translateX(-5px); /* Mover a la izquierda en la mitad de la animación */
   }
 }
 
@@ -89,7 +109,7 @@
   color: white;
   border: none; /* Sin borde */
   text-decoration: none;
-  padding: 8px 20px;/* Aumentar el padding para botones más grandes */
+  padding: 8px 20px; /* Aumentar el padding para botones más grandes */
   border-radius: 30px;
   font-size: 1rem;
   text-align: center; /* Centrar texto */
@@ -98,11 +118,7 @@
   font-weight: 600;
 }
 
-.proyecto-boton3:hover {
-  transform: scale(1.05); /* Efecto de escalado en hover */
-  color: black;
-}
-
+.proyecto-boton3:hover,
 .proyecto-boton4:hover {
   transform: scale(1.05); /* Efecto de escalado en hover */
   color: black;
@@ -117,10 +133,10 @@
 /* Animación de entrada */
 @keyframes fadeIn {
   from {
-      opacity: 0;
+    opacity: 0;
   }
   to {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
@@ -144,11 +160,15 @@
   background-color: #ff6600; /* Color para el círculo activo */
 }
 
-.proyecto-informativo{
+.proyecto-informativo {
   display: flex;
   justify-content: space-between;
 }
 
-.iconito{
+.iconito {
   margin-bottom: 10px;
+}
+
+.proyecto-icona {
+  margin-right: 7px;
 }

@@ -1,24 +1,26 @@
 /* Proyectos.css */
-.proyectos-contain{
+
+.proyectos-contain {
   margin-top: 5rem;
+  text-align: center;
 }
 
 .proyectos-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 6rem;
   justify-content: center;
   padding: 20px;
-  padding-bottom: 8rem;
 }
 
 .proyectos-title {
   font-size: 4rem;
-  text-align: center;
   color: #ffffff;
-  margin-bottom: 20px;
+  margin: 5rem 0 2rem 0;
   animation: slideIn 0.5s ease; /* Animación de entrada */
   font-family: "DM Serif Display", serif;
+  border-bottom: .4rem solid #ff6600;
+  display: inline-block;
 }
 
 /* Animación de entrada */
@@ -31,4 +33,21 @@
       transform: translateY(0);
       opacity: 1;
   }
+}
+
+/* Nueva animación para despliegue desde la derecha */
+@keyframes slideInRight {
+  from {
+      transform: translateX(100px);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+/* Aplicar la animación sólo a los elementos con slide-right */
+.fade-in.slide-right {
+  animation: slideInRight 0.6s ease;
 }

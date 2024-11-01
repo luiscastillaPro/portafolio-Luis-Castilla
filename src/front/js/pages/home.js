@@ -6,6 +6,7 @@ import { faLinkedin, faGithub, faInstagram, faFacebook } from '@fortawesome/free
 import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
 import Skills from "../pages/Skills.js";
 import Proyectos from "./proyectos.js";
+import Contacto from "./Contacto.js";
 
 const Home = () => {
     const [displayText, setDisplayText] = useState("");
@@ -129,8 +130,14 @@ const Home = () => {
             <div className="scroll-indicator">
                 <FontAwesomeIcon icon={faAngleDoubleDown} className="down-arrow" />
             </div>
-            <section id="Proyectos">
+            <section>
                 <Proyectos />
+            </section>
+            <div className="scroll-indicator">
+                <FontAwesomeIcon icon={faAngleDoubleDown} className="down-arrow" />
+            </div>
+            <section id="contacto">
+                <Contacto />
             </section>
         </div>
     );
