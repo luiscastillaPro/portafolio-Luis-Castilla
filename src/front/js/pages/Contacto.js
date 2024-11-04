@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaUser, FaPen } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaUser, FaPen, FaUsers  } from 'react-icons/fa'; // Importar FaComment
 import "../../styles/contacto.css";
 
 const Contacto = () => {
@@ -16,7 +16,9 @@ const Contacto = () => {
 
     return (
         <div id="contacto" className="contacto-container fade-in">
-            <h2 className="contact-title">Contacto</h2>
+             <h2 className="contact-title">
+                <FaUsers  className="contact-icon" /> Contacto
+            </h2>
             <div className="contacto-contin fade-in">
                 <div className="contact-info fade-in">
                     <h3>Hablemos</h3>
@@ -30,6 +32,7 @@ const Contacto = () => {
                             <p>{text}</p>
                         </div>
                     ))}
+                    <p className="contacto-mensajee">¡No dudes en contactarme!</p>
                 </div>
                 <div className="contact-form fade-in">
                     <form>

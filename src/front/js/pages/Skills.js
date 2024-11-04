@@ -1,16 +1,17 @@
 import React, { useEffect } from "react";
+import { FaTools } from 'react-icons/fa'; // Importa el icono que desees
 import "../../styles/skills.css";
 import html from "../../img/skills/html.png";
 import css from "../../img/skills/css.png";
 import javascript from "../../img/skills/javascript.png";
 import react from "../../img/skills/react.png";
-import node from "../../img/skills/node.png"; 
-import git from "../../img/skills/git.png"; 
+import node from "../../img/skills/node.png";
+import git from "../../img/skills/git.png";
 import github from "../../img/skills/github.png";
 import bootstrap from "../../img/skills/bootstrap.png";
 import python from "../../img/skills/python.png";
 import sql from "../../img/skills/sql.png";
-import flask from "../../img/skills/flask.png"; 
+import flask from "../../img/skills/flask.png";
 import jwt from "../../img/skills/jwt.png";
 import figma from "../../img/skills/figma.png";
 import canva from "../../img/skills/canva.png";
@@ -56,10 +57,13 @@ const Skills = () => {
     ];
 
     return (
-        <div id="skills" className="skills-container"> 
-            <h2 className="skills-title fade-in">My Skills</h2>
+        <div id="skills" className="skills-container">
+             <h2 className="skills-title fade-in">
+                <FaTools className="skills-icon" />
+                My Skills
+            </h2>
             <div className="skill-cont-table fade-in">
-            <div className="skills-table">
+                <div className="skills-table">
                     {skillsData.map((skill, index) => (
                         <div key={index} className="skill-item fade-in">
                             <img src={skill.src} alt={skill.name} />

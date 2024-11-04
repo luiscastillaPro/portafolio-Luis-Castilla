@@ -7,7 +7,7 @@
 }
 
 .contacto-contin {
-    padding: 2.5rem;
+    padding: 2rem;
     max-width: 1000px;
     background-color: rgba(255, 255, 255, 0.18);
     border-radius: 20px;
@@ -19,13 +19,21 @@
 
 .contact-info {
     width: 40%;
-    padding: 5rem 0 0 1rem;
+}
+
+.contact-info h3{
+    margin: 2rem 0;
+    color: #ff6600; /* Cambia el color según tu diseño */
+    font-family: "DM Serif Display", serif;
+    font-size: 3.5rem;
+    font-weight: bold;
 }
 
 .contacto-ico {
     color: #ff6600;
     font-size: 1.5rem;
     margin-right: 10px; /* Separación entre icono y texto */
+    margin-bottom: 5px;
 }
 
 .contact-title {
@@ -38,12 +46,21 @@
     margin-top: 6rem;
 }
 
+.contacto-mensajee{
+    margin-top: 2.5rem;
+    color: #ff6600;
+    font-size: 1.9rem;
+}
+
 .contact-detail {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
     font-size: 1.5rem;
     font-weight: 600;
+}
+
+.contact-detail p{
+    margin: 5px 0;
 }
 
 .contact-form {
@@ -140,3 +157,10 @@
 .input-icon-container.visible.slide-right {
     animation: slideInRight 2s ease forwards;
 }
+
+.contact-icon {
+    color: #ff6600; /* Color naranja */
+    font-size: 3.5rem; /* Tamaño del icono, ajusta según prefieras */
+    vertical-align: middle; /* Alineación vertical con el texto */
+    margin-bottom: 10px;
+  }

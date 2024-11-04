@@ -91,3 +91,11 @@
     bottom: 10px; /* Posiciona el texto dentro de la celda */
     opacity: 1; /* Hace visible el texto */
 }
+
+.skills-icon {
+    color: #ff6600; /* Color naranja */
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+    font-size: 3rem; /* Tamaño del icono, ajusta según prefieras */
+    vertical-align: middle; /* Alineación vertical con el texto */
+    margin-bottom: 10px;
+}

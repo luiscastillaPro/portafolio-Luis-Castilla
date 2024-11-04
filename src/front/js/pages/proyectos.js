@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { FaClipboardList } from 'react-icons/fa'; // Importar el icono
 import ProyectoCard from '../component/proyectoCard.jsx';
 import portada from "../../img/HooBoo/portada.jpeg";
 import primera from "../../img/HooBoo/primera.jpeg";
@@ -61,7 +62,9 @@ const Proyectos = () => {
 
   return (
     <div id="proyectos" className="proyectos-contain">
-      <h1 className="proyectos-title fade-in">Proyectos</h1>
+       <h1 className="proyectos-title fade-in">
+        <FaClipboardList className="projects-icon" /> Proyectos
+      </h1>
       <div className="proyectos-container">
         {proyectosData.map((proyecto, index) => (
           <ProyectoCard

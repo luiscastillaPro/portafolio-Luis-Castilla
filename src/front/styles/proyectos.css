@@ -1,7 +1,6 @@
 /* Proyectos.css */
 
 .proyectos-contain {
-  margin-top: 5rem;
   text-align: center;
 }
 
@@ -50,4 +49,11 @@
 /* Aplicar la animación sólo a los elementos con slide-right */
 .fade-in.slide-right {
   animation: slideInRight 0.6s ease;
+}
+
+.projects-icon {
+  color: #ff6600; /* Color naranja */
+  font-size: 3.5rem; /* Tamaño del icono, ajusta según prefieras */
+  vertical-align: middle; /* Alineación vertical con el texto */
+  margin-bottom: 10px;
 }
