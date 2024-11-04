@@ -7,7 +7,7 @@
     justify-content: space-between;
     background-color: rgba(255, 255, 255, 0.18);
     max-width: 1100px;
-    margin: 0 auto 10rem;
+    margin: 0 auto 9rem;
     padding: 2.5rem;
     border-radius: 20px;
     border: 1px solid rgb(105, 105, 105);
@@ -62,7 +62,7 @@
     background-color: rgb(0, 0, 0);
     font-size: .8rem;
     width: 11.3rem;
-    margin-bottom: 1rem;
+    margin-left: auto;
 }
 
 .home-con1{
@@ -120,7 +120,7 @@
 }
 
 /* Estilos iniciales del ícono de descarga */
-.download-icon {
+.download-icon, .user-icon {
     opacity: 0; /* Invisible al inicio */
     transform: translateX(13px); /* Posicionado ligeramente a la izquierda */
     transition: opacity 0.5s ease, transform 0.6s ease; /* Transición suave */
@@ -128,11 +128,11 @@
 }
 
 /* Efecto al hacer hover */
-.contact-button:hover .download-icon {
-    opacity: 1; /* Hacer el icono visible */
-    transform: translateX(0); /* Desplazarlo a su posición original */
+.contact-button:hover .download-icon,
+.contact-button:hover .user-icon {
+    opacity: 1;
+    transform: translateX(0);
 }
-
 
 .cursor {
     font-weight: bold;
@@ -151,7 +151,7 @@
 
 .home-redes {
     display: flex; /* Para que los iconos se alineen horizontalmente */
-    justify-content: space-around; /* Espacio uniforme entre los iconos */
+    justify-content: center; /* Espacio uniforme entre los iconos */
     margin-top: 20px; /* Espacio entre el contenido y los iconos */
 }
 
@@ -223,21 +223,19 @@
     display: flex;
     justify-content: center; /* Centrar horizontalmente */
     align-items: center; /* Centrar verticalmente */
-    margin-top: 3rem; /* Espacio encima del icono */
 }
 
 .scroll-indicator-educacion {
     display: flex;
     justify-content: center; /* Centrar horizontalmente */
     align-items: center; /* Centrar verticalmente */
-    margin-top: 4rem; /* Espacio encima del icono */
 }
 
 .scroll-indicator-skills {
     display: flex;
     justify-content: center; /* Centrar horizontalmente */
     align-items: center; /* Centrar verticalmente */
-    margin-top: 8rem; /* Espacio encima del icono */
+    margin-top: 3rem; /* Espacio encima del icono */
 }
 
 .scroll-indicator-proyectos {
@@ -260,4 +258,10 @@
     50% {
         transform: translateY(-10px); /* Rebote hacia arriba */
     }
+}
+
+.button-group {
+    display: flex; /* Coloca los botones en fila */
+    gap: 1rem; /* Espacio entre los botones */
+    margin-top: 2rem; /* Ajusta según sea necesario */
 }

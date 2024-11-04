@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import "../../styles/home.css";
 import foto from "../../img/foto.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithub, faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
-import { faAngleDoubleDown, faDownload } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faAngleDoubleDown, faDownload, faUser } from '@fortawesome/free-solid-svg-icons';
 import Skills from "../pages/Skills.js";
 import Proyectos from "./proyectos.js";
 import Contacto from "./Contacto.js";
@@ -11,9 +11,7 @@ import Educacion from "./educacion.js";
 
 const socialLinks = [
     { icon: faLinkedin, url: "https://www.linkedin.com/in/luiscastillav30/" },
-    { icon: faGithub, url: "https://github.com/luiscastillaPro" },
-    { icon: faInstagram, url: "https://www.instagram.com/luis.castillav30" },
-    { icon: faFacebook, url: "https://www.tiktok.com/@luiscastilla" }
+    { icon: faGithub, url: "https://github.com/luiscastillaPro" }
 ];
 
 const Home = () => {
@@ -68,7 +66,7 @@ const Home = () => {
         <div className="home-container fade-in-element">
             <div className="home-contai fade-in-element">
                 <div className="home-con1 fade-in-element">
-                    <h3 className="home-bienvenido fade-in-element">Bienvenido a mi Portafolio</h3>
+                    <h3 className="home-bienvenido fade-in-element">Disponible para Trabajar</h3>
                     <p className="home-texto fade-in-element">Hola, mi nombre es</p>
                     <h1 className="home-titulo fade-in-element">Luis Castilla</h1>
                     <p className="home-texto fade-in-element">Y soy </p>
@@ -80,12 +78,20 @@ const Home = () => {
                         Apasionado por la tecnología y el desarrollo web, he desarrollado habilidades tanto en el front-end como en el back-end, lo que me permite tener una visión integral del ciclo de desarrollo de software.
                         Comprometido con el aprendizaje continuo, siempre enfocado en mejorar mis habilidades y en mantenerme al día con las últimas tendencias tecnológicas.
                     </h6>
-                    <a href="https://drive.google.com/uc?export=download&id=1FJXKzgC5stMr66OCcgYsFG_EoLXDuz9U" download="CV_Luis_Castilla.pdf">
+                    <div className="button-group">
+                        <a href="https://drive.google.com/uc?export=download&id=1FJXKzgC5stMr66OCcgYsFG_EoLXDuz9U" download="CV_Luis_Castilla.pdf">
+                            <button className="contact-button fade-in-element">
+                                Descargar CV
+                                <FontAwesomeIcon icon={faDownload} className="download-icon" />
+                            </button>
+                        </a>
+                        <a href="#contacto">
                         <button className="contact-button fade-in-element">
-                            Descargar CV
-                            <FontAwesomeIcon icon={faDownload} className="download-icon" />
+                            Contáctame
+                            <FontAwesomeIcon icon={faUser} className="user-icon" />
                         </button>
                     </a>
+                    </div>
                 </div>
                 <div className="home-perfil fade-in-element">
                     <div className="home-con2">

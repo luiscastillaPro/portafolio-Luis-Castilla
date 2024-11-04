@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { FaTools } from 'react-icons/fa'; // Importa el icono que desees
+import { FaTools } from 'react-icons/fa';
 import "../../styles/skills.css";
 import html from "../../img/skills/html.png";
 import css from "../../img/skills/css.png";
@@ -13,14 +13,12 @@ import python from "../../img/skills/python.png";
 import sql from "../../img/skills/sql.png";
 import flask from "../../img/skills/flask.png";
 import jwt from "../../img/skills/jwt.png";
-import figma from "../../img/skills/figma.png";
-import canva from "../../img/skills/canva.png";
-import wordpress from "../../img/skills/wordpress.png";
+import response from "../../img/response.png";
 
 const Skills = () => {
     useEffect(() => {
         const handleScroll = () => {
-            const fadeElements = document.querySelectorAll(".fade-in");
+            const fadeElements = document.querySelectorAll(".fade-in, .fade-in-image, .fade-in-paragraph");
             fadeElements.forEach((element) => {
                 const rect = element.getBoundingClientRect();
                 if (rect.top < window.innerHeight - 150) {
@@ -31,9 +29,8 @@ const Skills = () => {
             });
         };
 
-
         window.addEventListener("scroll", handleScroll);
-        handleScroll(); // Ejecuta al cargar para elementos ya en pantalla
+        handleScroll();
 
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
@@ -43,33 +40,38 @@ const Skills = () => {
         { src: css, name: "CSS3" },
         { src: javascript, name: "JavaScript" },
         { src: react, name: "React" },
-        { src: figma, name: "Figma" },
         { src: node, name: "Node.js" },
         { src: git, name: "Git" },
         { src: github, name: "GitHub" },
         { src: bootstrap, name: "Bootstrap" },
-        { src: canva, name: "Canva" },
         { src: python, name: "Python" },
         { src: sql, name: "SQL" },
         { src: flask, name: "Flask" },
         { src: jwt, name: "JWT" },
-        { src: wordpress, name: "WordPress" },
     ];
 
     return (
         <div id="skills" className="skills-container">
-             <h2 className="skills-title fade-in">
+            <h2 className="skills-title fade-in">
                 <FaTools className="skills-icon" />
                 My Skills
             </h2>
-            <div className="skill-cont-table fade-in">
-                <div className="skills-table">
-                    {skillsData.map((skill, index) => (
-                        <div key={index} className="skill-item fade-in">
-                            <img src={skill.src} alt={skill.name} />
-                            <span className="skill-text">{skill.name}</span>
-                        </div>
-                    ))}
+            <div className="skills-content">
+                <div className="skills-left-column fade-in">
+                    <div className="skills-table">
+                        {skillsData.map((skill, index) => (
+                            <div key={index} className="skill-item fade-in">
+                                <img src={skill.src} alt={skill.name} />
+                                <span className="skill-text">{skill.name}</span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <div className="skills-right-column">
+                    <img src={response} alt="Responsive Design" className="responsive-image fade-in-image" />
+                    <p className="skills-description fade-in-paragraph">
+                        Como desarrollador Full Stack, manejo una variedad de tecnologías clave tanto en el frontend como en el backend, incluyendo HTML, CSS, JavaScript, React, Node.js, Python, SQL y Flask. he trabajado con herramientas y frameworks como Bootstrap para el diseño, Git y GitHub para el control de versiones, y SQLAlchemy y JWT para la autenticación y la gestión de bases de datos. Me aseguro de que cada proyecto sea completamente responsivo. puedo llevar un proyecto desde su concepción hasta su implementación final..
+                    </p>
                 </div>
             </div>
         </div>
