@@ -109,12 +109,28 @@
     font-size: 1rem; /* Tamaño de la fuente */
     transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
     margin-top: 2rem; /* Espacio arriba del botón */
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* Sombra blanca */
+    font-weight: 600;
 }
 
 /* Efecto al pasar el mouse */
 .contact-button:hover {
-    background-color: #e65c00; /* Un tono más oscuro al pasar el mouse */
+    background-color: black; /* Un tono más oscuro al pasar el mouse */
+    color: black;
+    box-shadow: 0 0 15px rgba(255, 126, 41, 2); /* Sombra blanca */
+}
+
+/* Estilos iniciales del ícono de descarga */
+.download-icon {
+    opacity: 0; /* Invisible al inicio */
+    transform: translateX(13px); /* Posicionado ligeramente a la izquierda */
+    transition: opacity 0.5s ease, transform 0.6s ease; /* Transición suave */
+    margin-left: 5px;
+}
+
+/* Efecto al hacer hover */
+.contact-button:hover .download-icon {
+    opacity: 1; /* Hacer el icono visible */
+    transform: translateX(0); /* Desplazarlo a su posición original */
 }
 
 
@@ -140,26 +156,48 @@
 }
 
 .icon-container {
-    background-color: rgb(0, 0, 0); /* Fondo blanco */
     border-radius: 50%; /* Hace que el contenedor sea circular */
     display: flex; /* Para centrar la imagen */
     justify-content: center; /* Centrar horizontalmente */
     align-items: center; /* Centrar verticalmente */
     width: 40px; /* Ajusta el tamaño según sea necesario */
     height: 40px; /* Ajusta el tamaño según sea necesario */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Sombra ligera para dar profundidad */
     margin: 0 10px; /* Espacio entre los iconos */
     transition: transform 0.3s; /* Transición suave al escalar */
 }
 
+/* Animación de giro de 360 grados y aumento de tamaño */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg) scale(1); /* Sin transformación */
+    }
+    50% {
+        transform: rotate(180deg) scale(1.4); /* Aumenta un poco de tamaño en el medio */
+    }
+    100% {
+        transform: rotate(360deg) scale(1); /* Regresa al tamaño original */
+    }
+}
+
+
+/* Aplicar la animación al hover */
+.icon-container:hover {
+    animation: spin 0.3s linear; /* 0.6s es la duración del giro */
+}
+
+
+
 .redes-icono {
     color: rgb(221, 221, 221); /* Color negro para el icono */
-    width: 90%; /* Ajusta el tamaño según sea necesario */
-    height: 90%; /* Ajusta el tamaño según sea necesario */
+    border-radius: 50%;
+    font-size: 2.5rem;
 }
 
 .redes-icono:hover {
-    transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+    color: #ff6600; /* Color negro para el icono */
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0);
+    font-size: 2.5rem;
 }
 
 .home-intro{
@@ -186,6 +224,27 @@
     justify-content: center; /* Centrar horizontalmente */
     align-items: center; /* Centrar verticalmente */
     margin-top: 3rem; /* Espacio encima del icono */
+}
+
+.scroll-indicator-educacion {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    margin-top: 4rem; /* Espacio encima del icono */
+}
+
+.scroll-indicator-skills {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    margin-top: 8rem; /* Espacio encima del icono */
+}
+
+.scroll-indicator-proyectos {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    margin-top: 5rem; /* Espacio encima del icono */
 }
 
 .down-arrow {

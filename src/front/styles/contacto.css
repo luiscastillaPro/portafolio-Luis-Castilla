@@ -3,7 +3,7 @@
 .contacto-container {
     color: white;
     text-align: center;
-    padding-bottom: 10rem;
+    padding-bottom: 6rem;
 }
 
 .contacto-contin {
@@ -25,24 +25,23 @@
 .contacto-ico {
     color: #ff6600;
     font-size: 1.5rem;
+    margin-right: 10px; /* Separación entre icono y texto */
 }
 
 .contact-title {
     font-size: 3rem;
-    margin: 3rem;
+    margin: 3rem auto;
     font-family: "DM Serif Display", serif;
     color: white;
-    border-bottom: .4rem solid #ff6600;
+    border-bottom: 0.4rem solid #ff6600;
     display: inline-block;
+    margin-top: 6rem;
 }
 
 .contact-detail {
     display: flex;
+    align-items: center;
     margin-bottom: 15px;
-}
-
-.contact-detail p {
-    margin-left: 10px;
     font-size: 1.5rem;
     font-weight: 600;
 }
@@ -62,30 +61,24 @@
 
 .contact-form label {
     margin-bottom: 10px;
+    position: relative;
 }
 
 .contact-form input,
 .contact-form textarea {
-    padding: 10px;
+    padding: 10px 40px 10px 10px; /* Espacio a la derecha para el ícono */
     margin-bottom: 5px;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
+    color: white;
     width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-bottom: 3px solid #ff6600;
 }
 
 .contact-form textarea {
     resize: vertical;
-    /* Permitir cambiar tamaño verticalmente */
     height: 100px;
-    /* Alto fijo para el textarea */
-}
-
-.error-message {
-    color: red;
-    /* Color de los mensajes de error */
-    font-size: 12px;
-    display: none;
-    /* Inicialmente ocultar mensajes de error */
 }
 
 .contact-form button {
@@ -95,13 +88,55 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    text-align: center;
-    display: inline-block;
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
     font-weight: 600;
 }
 
 .contact-form button:hover {
-    transform: scale(1.01); /* Efecto de escalado en hover */
+    transform: scale(1.01);
     color: black;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+
+/* Animación de entrada */
+.input-icon-container {
+    opacity: 0;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.input-icon-container.visible {
+    opacity: 1;
+}
+
+.input-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ff6600;
+    pointer-events: none;
+}
+
+/* Animaciones */
+@keyframes slideInLeft {
+    from { transform: translateX(-150px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(150px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.input-icon-container.visible.slide-left {
+    animation: slideInLeft 2s ease forwards;
+}
+
+.input-icon-container.visible.slide-right {
+    animation: slideInRight 2s ease forwards;
 }

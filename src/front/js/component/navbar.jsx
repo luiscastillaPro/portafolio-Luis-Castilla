@@ -39,13 +39,14 @@ const Navbar = () => {
                     Home
                 </Link>
                 <Link 
-                    to="servicios" 
+                    to="educacion" 
                     smooth={true} 
                     duration={500}
                     activeClass="active" 
+                    offset={-100}
                     spy={true}
                 >
-                    Servicios
+                    Educacion
                 </Link>
                 <Link 
                     to="skills" 

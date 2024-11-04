@@ -40,18 +40,19 @@
 
 .skill-cont-table {
     background-color: rgba(255, 255, 255, 0.18);
-    max-width: 900px;
+    max-width: 775px;
     padding: 1.5rem;
     border-radius: 20px;
     border: 1px solid rgb(105, 105, 105);
 }
 
 .skills-table {
-    border-collapse: separate;
-    border-spacing: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
-.skills-table td {
+.skill-item {
     border: 1px solid white;
     padding: 10px;
     background-color: #ffffff;
@@ -63,10 +64,6 @@
     overflow: hidden; 
 }
 
-.skill-item {
-    text-align: center;
-    position: relative;
-}
 
 .skills-table img {
     width: 100%;
@@ -90,7 +87,7 @@
 }
 
 /* Mostrar texto al pasar el mouse */
-.skills-table td:hover .skill-text {
-    bottom: 1px;
-    opacity: 1;
+.skill-item:hover .skill-text {
+    bottom: 10px; /* Posiciona el texto dentro de la celda */
+    opacity: 1; /* Hace visible el texto */
 }

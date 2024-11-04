@@ -1,9 +1,8 @@
-// Proyectos.js
 import React, { useEffect } from "react";
 import ProyectoCard from '../component/proyectoCard.jsx';
 import portada from "../../img/HooBoo/portada.jpeg";
 import primera from "../../img/HooBoo/primera.jpeg";
-import segunda from "../../img/HooBoo/segunda.jpg";
+import segunda from "../../img/HooBoo/segunda.jpeg";
 import tercera from "../../img/HooBoo/tercera.jpeg";
 import cuarta from "../../img/HooBoo/cuarta.jpeg";
 import quinta from "../../img/HooBoo/quinta.jpeg";
@@ -68,7 +67,7 @@ const Proyectos = () => {
           <ProyectoCard
             key={index}
             proyecto={proyecto}
-            extraClass={index === 1 || index === 3 ? 'slide-right' : ''} // Aquí enviamos slide-right solo para el 2do y 4to elemento
+            extraClass={index === 1 || index === 3 ? 'slide-right' : ''}
           />
         ))}
       </div>

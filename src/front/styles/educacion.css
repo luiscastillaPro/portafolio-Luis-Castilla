@@ -1,0 +1,94 @@
+/* Contenedor Principal */
+.educacion-container {
+    padding: 20px;
+    margin: 5rem auto;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1400px;
+    background-color: rgba(255, 255, 255, 0.18);
+    border-radius: 20px;
+    border: 1px solid rgb(105, 105, 105);
+}
+
+.col {
+    flex: 1;
+}
+
+/* Títulos */
+.titulo-educacion,
+.titulo-experiencia {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-family: "DM Serif Display", serif;
+    color: white;
+    position: relative;
+}
+
+.titulo-educacion::after,
+.titulo-experiencia::after {
+    content: '';
+    display: block;
+    width: 35%;
+    height: 0.4rem;
+    background-color: #ff6600;
+    margin: 10px auto 0;
+}
+
+/* Items de Educación y Experiencia */
+.educacion-item,
+.experiencia-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.18);
+    padding: 15px;
+    border-radius: 5px;
+    position: relative;
+}
+
+/* Información de Educación y Experiencia */
+.educacion-info h3,
+.experiencia-info h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.educacion-info span,
+.experiencia-info span {
+    display: block;
+    font-size: 1rem;
+    color: #b3b3b3;
+}
+
+.educacion-info p,
+.experiencia-info p {
+    margin-top: 5px;
+    font-size: 1rem;
+    color: #b3b3b3;
+}
+
+/* Estilos de Icono Circular y Línea */
+._circleContainer_1u4ch_75 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 0.8em 5px 0.5em;
+}
+
+._circle_1u4ch_75 {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    background-color: #ff6600;
+}
+
+._line_1u4ch_105 {
+    width: 2px;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+

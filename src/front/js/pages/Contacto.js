@@ -1,25 +1,17 @@
 import React, { useEffect } from "react";
-import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'; // Importando iconos de react-icons
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaUser, FaPen } from 'react-icons/fa';
 import "../../styles/contacto.css";
 
 const Contacto = () => {
     useEffect(() => {
-        const handleScroll = () => {
-            const fadeElements = document.querySelectorAll(".fade-in");
-            fadeElements.forEach((element) => {
-                const rect = element.getBoundingClientRect();
-                if (rect.top < window.innerHeight - 150) {
-                    element.classList.add("visible");
-                } else {
-                    element.classList.remove("visible");
-                }
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                entry.target.classList.toggle("visible", entry.isIntersecting);
             });
-        };
+        }, { threshold: 0.5 });
 
-        window.addEventListener("scroll", handleScroll);
-        handleScroll();
-
-        return () => window.removeEventListener("scroll", handleScroll);
+        document.querySelectorAll(".input-icon-container").forEach(el => observer.observe(el));
+        return () => observer.disconnect();
     }, []);
 
     return (
@@ -27,47 +19,41 @@ const Contacto = () => {
             <h2 className="contact-title">Contacto</h2>
             <div className="contacto-contin fade-in">
                 <div className="contact-info fade-in">
-                    <div className="contact-detail">
-                        <span className="contacto-ico"><FaPhone /></span>
-                        <p>+34 641992406</p>
-                    </div>
-                    <div className="contact-detail">
-                        <span className="contacto-ico"><FaEnvelope /></span>
-                        <p>luis.castillav30@gmail.com</p>
-                    </div>
-                    <div className="contact-detail">
-                        <span className="contacto-ico"><FaMapMarkerAlt /></span>
-                        <p>Sineu, Palmas de Mallorca</p>
-                    </div>
+                    <h3>Hablemos</h3>
+                    {[
+                        { icon: <FaPhone />, text: "+34 641992406" },
+                        { icon: <FaEnvelope />, text: "luis.castillav30@gmail.com" },
+                        { icon: <FaMapMarkerAlt />, text: "Sineu, Palmas de Mallorca" }
+                    ].map(({ icon, text }, index) => (
+                        <div key={index} className="contact-detail">
+                            <span className="contacto-ico">{icon}</span>
+                            <p>{text}</p>
+                        </div>
+                    ))}
                 </div>
                 <div className="contact-form fade-in">
                     <form>
-                        <label>
-                            <input type="text" required placeholder="Tu nombre" />
-                        </label>
-                        <span className="error-message">El nombre es requerido</span>
-
-                        <label>
-                            <input type="email" required placeholder="Tu email" />
-                        </label>
-                        <span className="error-message">El email es requerido</span>
-
-                        <label>
-                            <input type="text" required placeholder="Asunto" />
-                        </label>
-                        <span className="error-message">El asunto es requerido</span>
-
-                        <label>
+                        {[
+                            { placeholder: "Tu nombre", type: "text", icon: <FaUser />, error: "El nombre es requerido" },
+                            { placeholder: "Tu email", type: "email", icon: <FaEnvelope />, error: "El email es requerido" },
+                            { placeholder: "Asunto", type: "text", icon: <FaPen />, error: "El asunto es requerido" },
+                        ].map(({ placeholder, type, icon, error }, index) => (
+                            <label key={index} className={`input-icon-container ${index % 2 ? "slide-right" : "slide-left"}`}>
+                                <input type={type} required placeholder={placeholder} />
+                                <span className="input-icon">{icon}</span>
+                                <span className="error-message">{error}</span>
+                            </label>
+                        ))}
+                        <label className="input-icon-container slide-right">
                             <textarea required placeholder="Escriba su mensaje..."></textarea>
+                            <span className="error-message">El mensaje es requerido</span>
                         </label>
-                        <span className="error-message">El mensaje es requerido</span>
-
                         <button type="submit">Enviar</button>
                     </form>
                 </div>
             </div>
         </div>
     );
-}
+};
 
 export default Contacto;
