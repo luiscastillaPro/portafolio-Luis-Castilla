@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import '../../styles/proyectoCard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHtml5, faCss3Alt, faJs, faReact } from '@fortawesome/free-brands-svg-icons'; // Importa íconos de habilidades
-import { faInfoCircle, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { faHtml5, faCss3Alt, faJs, faReact, faNodeJs, faBootstrap, faPython } from '@fortawesome/free-brands-svg-icons'; // Importa íconos de habilidades
+import { faInfoCircle, faExternalLinkAlt, faKey, faDatabase } from '@fortawesome/free-solid-svg-icons'; // Asegúrate de incluir faKey y faDatabase
 
 import Modal from "../component/modal.jsx";
 
@@ -25,7 +25,21 @@ const ProyectoCard = ({ proyecto, extraClass }) => {
         }
     };
 
-    const { titulo, descripcion, imagenes = [], liveLink, codigoLink } = proyecto;
+    const { titulo, imagenes = [], liveLink, codigoLink, skills, proposito, funcionalidad, tecnologias } = proyecto;
+
+    // Mapa de íconos para las habilidades
+    const skillIcons = {
+        HTML: faHtml5,
+        CSS: faCss3Alt,
+        JavaScript: faJs,
+        React: faReact,
+        "Node.js": faNodeJs, // Agregar ícono para Node.js
+        Bootstrap: faBootstrap,
+        Python: faPython,
+        SQLAlchemy: faDatabase, // Asegúrate de que este ícono esté importado
+        "API REST": faKey // Asegúrate de que este ícono esté importado
+        // Agrega más habilidades e íconos según sea necesario
+    };
 
     return (
         <div className={`proyecto-card fade-in ${extraClass}`}>
@@ -34,7 +48,7 @@ const ProyectoCard = ({ proyecto, extraClass }) => {
                     <div className='proyecto-informativo'>
                         <h2 className='proyecto-titul'>{titulo}</h2>
                         <button onClick={() => setModalVisible(true)} className="info-button">
-                            <p className='proyecto-textico'>saber mas</p>
+                            <p className='proyecto-textico'>saber más</p>
                             <FontAwesomeIcon className='iconito' icon={faInfoCircle} />
                         </button>
                     </div>
@@ -48,22 +62,12 @@ const ProyectoCard = ({ proyecto, extraClass }) => {
                         
                         {/* Contenedor de habilidades con íconos y texto */}
                         <div className={`proyecto-skills-overlay ${hover ? 'show' : ''}`}>
-                            <div className="proyecto-skill-item">
-                                <FontAwesomeIcon icon={faHtml5} className="proyecto-skill-icon" />
-                                <span>HTML</span>
-                            </div>
-                            <div className="proyecto-skill-item">
-                                <FontAwesomeIcon icon={faCss3Alt} className="proyecto-skill-icon" />
-                                <span>CSS</span>
-                            </div>
-                            <div className="proyecto-skill-item">
-                                <FontAwesomeIcon icon={faJs} className="proyecto-skill-icon" />
-                                <span>JavaScript</span>
-                            </div>
-                            <div className="proyecto-skill-item">
-                                <FontAwesomeIcon icon={faReact} className="proyecto-skill-icon" />
-                                <span>React</span>
-                            </div>
+                            {skills && skills.map((skill, index) => (
+                                <div key={index} className="proyecto-skill-item">
+                                    <FontAwesomeIcon icon={skillIcons[skill]} className="proyecto-skill-icon" />
+                                    <span>{skill}</span>
+                                </div>
+                            ))}
                         </div>
 
                         <button className='proyecto-boton2' onClick={siguienteImagen}>{">"}</button>
@@ -85,7 +89,16 @@ const ProyectoCard = ({ proyecto, extraClass }) => {
                             {"</>"} Ver código
                         </a>
                     </div>
-                    <Modal visible={modalVisible} onClose={() => setModalVisible(false)} title={titulo} description={descripcion} />
+                    <Modal 
+                        visible={modalVisible} 
+                        onClose={() => setModalVisible(false)} 
+                        title={titulo}
+                        imagenes={imagenes} 
+                        skills={skills}
+                        proposito={proposito}
+                        funcionalidad={funcionalidad}
+                        tecnologias={tecnologias}
+                    />
                 </>
             )}
         </div>

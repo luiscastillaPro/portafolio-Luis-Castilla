@@ -12,31 +12,43 @@ import "../../styles/proyectos.css";
 const proyectosData = [
   {
     titulo: "HooBoo",
-    descripcion: "Descripción del Proyecto 1",
     imagenes: [portada, primera, segunda, tercera, cuarta, quinta],
     liveLink: "https://sample-service-name-nn8y.onrender.com/",
-    codigoLink: "https://github.com/luiscastillaPro/HooBoo"
+    codigoLink: "https://github.com/luiscastillaPro/HooBoo",
+    skills: ["React", "Node.js", "CSS", "JavaScript", "Bootstrap", "API REST", "HTML", "Flask", "Python", "SQLAlchemy"],
+    proposito: "GUAU GUAU is a web application designed to facilitate dog dating. Created as a final project for 4Geeks Academy Spain, it allows dog owners to find matches for their pets, ensuring they can interact and form connections. The application not only offers a fun way to connect but also incorporates advanced features like real-time chat, secure authentication, and AI-driven insights to enhance user experience.",
+    funcionalidad: ["User Registration: Allows owners to register and add profiles for one or more dogs.","Dog Matching: Users can interact through 'likes' and 'matches' and chat in real-time if a match is made.","Search & Filter: Users can filter dogs by breed, sex, age, and location using external APIs and geocoding.","Secure Authentication: Implements JWT for secure user authentication.","Profile & Photo Management: Users can add and store profile photos and additional photos via Cloudinary.","AI Integration: Provides care information and breed compatibility using OpenAI."],
+    tecnologias: ["Front-End Development: React, Bootstrap, CSS","Back-End Development: Python, Flask, SQLAlchemy","Real-Time Communication: Socket.io for real-time chat functionality","API Integration: External API calls for breed information and geocoding","Authentication: Secure authentication using JWT","Cloud Services: Cloudinary for photo storage","AI Services: OpenAI for providing care information and breed compatibility"]
   },
   {
     titulo: "HooBoo",
-    descripcion: "Descripción del Proyecto 2",
     imagenes: [portada, primera, segunda, tercera, cuarta, quinta],
     liveLink: "https://sample-service-name-nn8y.onrender.com/",
-    codigoLink: "https://github.com/luiscastillaPro/HooBoo"
+    codigoLink: "https://github.com/luiscastillaPro/HooBoo",
+    skills: ["React", "Bootstrap", "API REST"],
+    proposito: "GUAU GUAU is a web application designed to facilitate dog dating. Created as a final project for 4Geeks Academy Spain, it allows dog owners to find matches for their pets, ensuring they can interact and form connections. The application not only offers a fun way to connect but also incorporates advanced features like real-time chat, secure authentication, and AI-driven insights to enhance user experience.",
+    funcionalidad: ["User Registration: Allows owners to register and add profiles for one or more dogs.","Dog Matching: Users can interact through 'likes' and 'matches' and chat in real-time if a match is made.","Search & Filter: Users can filter dogs by breed, sex, age, and location using external APIs and geocoding.","Secure Authentication: Implements JWT for secure user authentication.","Profile & Photo Management: Users can add and store profile photos and additional photos via Cloudinary.","AI Integration: Provides care information and breed compatibility using OpenAI."],
+    tecnologias: ["Front-End Development: React, Bootstrap, CSS","Back-End Development: Python, Flask, SQLAlchemy","Real-Time Communication: Socket.io for real-time chat functionality","API Integration: External API calls for breed information and geocoding","Authentication: Secure authentication using JWT","Cloud Services: Cloudinary for photo storage","AI Services: OpenAI for providing care information and breed compatibility"]
   },
   {
     titulo: "HooBoo",
-    descripcion: "Descripción del Proyecto 3",
     imagenes: [portada, primera, segunda, tercera, cuarta, quinta],
     liveLink: "https://sample-service-name-nn8y.onrender.com/",
-    codigoLink: "https://github.com/luiscastillaPro/HooBoo"
+    codigoLink: "https://github.com/luiscastillaPro/HooBoo",
+    skills: ["JavaScript", "HTML", "CSS"],
+    proposito: "GUAU GUAU is a web application designed to facilitate dog dating. Created as a final project for 4Geeks Academy Spain, it allows dog owners to find matches for their pets, ensuring they can interact and form connections. The application not only offers a fun way to connect but also incorporates advanced features like real-time chat, secure authentication, and AI-driven insights to enhance user experience.",
+    funcionalidad: ["User Registration: Allows owners to register and add profiles for one or more dogs.","Dog Matching: Users can interact through 'likes' and 'matches' and chat in real-time if a match is made.","Search & Filter: Users can filter dogs by breed, sex, age, and location using external APIs and geocoding.","Secure Authentication: Implements JWT for secure user authentication.","Profile & Photo Management: Users can add and store profile photos and additional photos via Cloudinary.","AI Integration: Provides care information and breed compatibility using OpenAI."],
+    tecnologias: ["Front-End Development: React, Bootstrap, CSS","Back-End Development: Python, Flask, SQLAlchemy","Real-Time Communication: Socket.io for real-time chat functionality","API Integration: External API calls for breed information and geocoding","Authentication: Secure authentication using JWT","Cloud Services: Cloudinary for photo storage","AI Services: OpenAI for providing care information and breed compatibility"]
   },
   {
     titulo: "HooBoo",
-    descripcion: "Descripción del Proyecto 4",
     imagenes: [portada, primera, segunda, tercera, cuarta, quinta],
     liveLink: "https://sample-service-name-nn8y.onrender.com/",
-    codigoLink: "https://github.com/luiscastillaPro/HooBoo"
+    codigoLink: "https://github.com/luiscastillaPro/HooBoo",
+    skills: ["Flask", "Python", "SQLAlchemy"],
+    proposito: "GUAU GUAU is a web application designed to facilitate dog dating. Created as a final project for 4Geeks Academy Spain, it allows dog owners to find matches for their pets, ensuring they can interact and form connections. The application not only offers a fun way to connect but also incorporates advanced features like real-time chat, secure authentication, and AI-driven insights to enhance user experience.",
+    funcionalidad: ["User Registration: Allows owners to register and add profiles for one or more dogs.","Dog Matching: Users can interact through 'likes' and 'matches' and chat in real-time if a match is made.","Search & Filter: Users can filter dogs by breed, sex, age, and location using external APIs and geocoding.","Secure Authentication: Implements JWT for secure user authentication.","Profile & Photo Management: Users can add and store profile photos and additional photos via Cloudinary.","AI Integration: Provides care information and breed compatibility using OpenAI."],
+    tecnologias: ["Front-End Development: React, Bootstrap, CSS","Back-End Development: Python, Flask, SQLAlchemy","Real-Time Communication: Socket.io for real-time chat functionality","API Integration: External API calls for breed information and geocoding","Authentication: Secure authentication using JWT","Cloud Services: Cloudinary for photo storage","AI Services: OpenAI for providing care information and breed compatibility"]
   },
 ];
 

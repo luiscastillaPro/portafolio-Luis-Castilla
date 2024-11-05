@@ -1,8 +1,16 @@
-import React, { useEffect } from "react";
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaUser, FaPen, FaUsers  } from 'react-icons/fa'; // Importar FaComment
+import React, { useEffect, useState } from "react";
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaUser, FaPen, FaUsers } from 'react-icons/fa';
 import "../../styles/contacto.css";
 
 const Contacto = () => {
+    const [showConfirmation, setShowConfirmation] = useState(false);
+    const [formData, setFormData] = useState({
+        nombre: "",
+        email: "",
+        asunto: "",
+        mensaje: ""
+    });
+
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -14,10 +22,36 @@ const Contacto = () => {
         return () => observer.disconnect();
     }, []);
 
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        setShowConfirmation(true);
+
+        // Limpiar los campos del formulario
+        setFormData({
+            nombre: "",
+            email: "",
+            asunto: "",
+            mensaje: ""
+        });
+
+        // Ocultar el mensaje después de unos segundos
+        setTimeout(() => {
+            setShowConfirmation(false);
+        }, 5000);
+    };
+
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value
+        }));
+    };
+
     return (
         <div id="contacto" className="contacto-container fade-in">
-             <h2 className="contact-title">
-                <FaUsers  className="contact-icon" /> Contacto
+            <h2 className="contact-title">
+                <FaUsers className="contact-icon" /> Contacto
             </h2>
             <div className="contacto-contin fade-in">
                 <div className="contact-info fade-in">
@@ -35,24 +69,62 @@ const Contacto = () => {
                     <p className="contacto-mensajee">¡No dudes en contactarme!</p>
                 </div>
                 <div className="contact-form fade-in">
-                    <form>
-                        {[
-                            { placeholder: "Tu nombre", type: "text", icon: <FaUser />, error: "El nombre es requerido" },
-                            { placeholder: "Tu email", type: "email", icon: <FaEnvelope />, error: "El email es requerido" },
-                            { placeholder: "Asunto", type: "text", icon: <FaPen />, error: "El asunto es requerido" },
-                        ].map(({ placeholder, type, icon, error }, index) => (
-                            <label key={index} className={`input-icon-container ${index % 2 ? "slide-right" : "slide-left"}`}>
-                                <input type={type} required placeholder={placeholder} />
-                                <span className="input-icon">{icon}</span>
-                                <span className="error-message">{error}</span>
-                            </label>
-                        ))}
+                    <form onSubmit={handleSubmit}>
+                        <label className="input-icon-container slide-left">
+                            <input
+                                type="text"
+                                name="nombre"
+                                required
+                                placeholder="Tu nombre"
+                                style={{ color: "black" }}
+                                value={formData.nombre}
+                                onChange={handleChange}
+                            />
+                            <span className="input-icon"><FaUser /></span>
+                            <span className="error-message">El nombre es requerido</span>
+                        </label>
                         <label className="input-icon-container slide-right">
-                            <textarea required placeholder="Escriba su mensaje..."></textarea>
+                            <input
+                                type="email"
+                                name="email"
+                                required
+                                placeholder="Tu email"
+                                style={{ color: "black" }}
+                                value={formData.email}
+                                onChange={handleChange}
+                            />
+                            <span className="input-icon"><FaEnvelope /></span>
+                            <span className="error-message">El email es requerido</span>
+                        </label>
+                        <label className="input-icon-container slide-left">
+                            <input
+                                type="text"
+                                name="asunto"
+                                required
+                                placeholder="Asunto"
+                                style={{ color: "black" }}
+                                value={formData.asunto}
+                                onChange={handleChange}
+                            />
+                            <span className="input-icon"><FaPen /></span>
+                            <span className="error-message">El asunto es requerido</span>
+                        </label>
+                        <label className="input-icon-container slide-right">
+                            <textarea
+                                name="mensaje"
+                                required
+                                placeholder="Escriba su mensaje..."
+                                style={{ color: "black" }}
+                                value={formData.mensaje}
+                                onChange={handleChange}
+                            ></textarea>
                             <span className="error-message">El mensaje es requerido</span>
                         </label>
                         <button type="submit">Enviar</button>
                     </form>
+                    {showConfirmation && (
+                        <p className="confirmation-message">¡Gracias! Tu mensaje ha sido enviado exitosamente.</p>
+                    )}
                 </div>
             </div>
         </div>

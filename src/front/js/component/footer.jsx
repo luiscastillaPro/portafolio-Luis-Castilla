@@ -1,23 +1,26 @@
 import React from "react";
 import "../../styles/footer.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPalette } from "@fortawesome/free-solid-svg-icons";
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faPalette, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+
+const socialLinks = [
+    { icon: faLinkedin, url: "https://www.linkedin.com/in/luiscastillav30/" },
+    { icon: faGithub, url: "https://github.com/luiscastillaPro" },
+    { icon: faEnvelope, url: "mailto:tucorreo@gmail.com" } // Cambia "tucorreo@gmail.com" por tu dirección real
+];
 
 const Footer = () => {
     return (
         <div className="footer-container">
             <div className="home-redes">
-                <a href="https://www.linkedin.com/in/luiscastillav30/" target="_blank" rel="noopener noreferrer">
-                    <div className="icon-container fade-in-element">
-                        <FontAwesomeIcon icon={faLinkedin} className="redes-icono" />
-                    </div>
-                </a>
-                <a href="https://github.com/luiscastillaPro" target="_blank" rel="noopener noreferrer">
-                    <div className="icon-container fade-in-element">
-                        <FontAwesomeIcon icon={faGithub} className="redes-icono" />
-                    </div>
-                </a>
+                {socialLinks.map(({ icon, url }, index) => (
+                    <a key={index} href={url} target="_blank" rel="noopener noreferrer">
+                        <div className="icon-container fade-in-element">
+                            <FontAwesomeIcon icon={icon} className="redes-icono" />
+                        </div>
+                    </a>
+                ))}
             </div>
             <p className="footer-text">
                 <FontAwesomeIcon icon={faPalette} /> Diseñado y construido por Luis Castilla

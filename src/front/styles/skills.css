@@ -1,6 +1,6 @@
 /* Contenedor principal */
 .skills-container {
-    padding: 5rem 0 0 0;
+    padding: 6rem 0 0 0;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -124,6 +124,7 @@
     font-size: 1rem;
     color: white;
     text-align: center;
+    margin: 0;
 }
 
 /* Animación de fade-in desde abajo para los elementos */

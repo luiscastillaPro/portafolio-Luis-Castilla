@@ -3,15 +3,17 @@ import "../../styles/home.css";
 import foto from "../../img/foto.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faAngleDoubleDown, faDownload, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDoubleDown, faDownload, faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons'; // Importa faEnvelope desde free-solid-svg-icons
 import Skills from "../pages/Skills.js";
 import Proyectos from "./proyectos.js";
 import Contacto from "./Contacto.js";
 import Educacion from "./educacion.js";
 
+// Agrega el enlace de Gmail y el ícono correspondiente
 const socialLinks = [
     { icon: faLinkedin, url: "https://www.linkedin.com/in/luiscastillav30/" },
-    { icon: faGithub, url: "https://github.com/luiscastillaPro" }
+    { icon: faGithub, url: "https://github.com/luiscastillaPro" },
+    { icon: faEnvelope, url: "mailto:tuemail@gmail.com" } // Reemplaza "tuemail@gmail.com" con tu correo real
 ];
 
 const Home = () => {
@@ -86,11 +88,11 @@ const Home = () => {
                             </button>
                         </a>
                         <a href="#contacto">
-                        <button className="contact-button fade-in-element">
-                            Contáctame
-                            <FontAwesomeIcon icon={faUser} className="user-icon" />
-                        </button>
-                    </a>
+                            <button className="contact-button fade-in-element">
+                                Contáctame
+                                <FontAwesomeIcon icon={faUser} className="user-icon" />
+                            </button>
+                        </a>
                     </div>
                 </div>
                 <div className="home-perfil fade-in-element">

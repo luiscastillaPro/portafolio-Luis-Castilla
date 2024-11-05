@@ -1,5 +1,5 @@
 .home-container {/* Ajusta según sea necesario */
-    padding-top: 26vh;
+    padding-top: 27vh;
 }
 
 .home-contai{
@@ -7,7 +7,7 @@
     justify-content: space-between;
     background-color: rgba(255, 255, 255, 0.18);
     max-width: 1100px;
-    margin: 0 auto 9rem;
+    margin: 0 auto 10rem;
     padding: 2.5rem;
     border-radius: 20px;
     border: 1px solid rgb(105, 105, 105);
@@ -108,7 +108,6 @@
     padding: 8px 20px; /* Espaciado interno */
     font-size: 1rem; /* Tamaño de la fuente */
     transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
-    margin-top: 2rem; /* Espacio arriba del botón */
     font-weight: 600;
 }
 
@@ -152,7 +151,7 @@
 .home-redes {
     display: flex; /* Para que los iconos se alineen horizontalmente */
     justify-content: center; /* Espacio uniforme entre los iconos */
-    margin-top: 20px; /* Espacio entre el contenido y los iconos */
+    margin-top: 2rem; /* Espacio entre el contenido y los iconos */
 }
 
 .icon-container {
@@ -205,6 +204,7 @@
     font-size: 1rem;
     margin-top: 1rem;
     font-weight: normal;
+    margin-bottom: 3rem;
 }
 
 .fade-in-element {
