@@ -62,12 +62,19 @@ const ProyectoCard = ({ proyecto, extraClass }) => {
                         
                         {/* Contenedor de habilidades con íconos y texto */}
                         <div className={`proyecto-skills-overlay ${hover ? 'show' : ''}`}>
-                            {skills && skills.map((skill, index) => (
-                                <div key={index} className="proyecto-skill-item">
-                                    <FontAwesomeIcon icon={skillIcons[skill]} className="proyecto-skill-icon" />
-                                    <span>{skill}</span>
-                                </div>
-                            ))}
+                            {skills && skills.map((skill, index) => {
+                                const icon = skillIcons[skill]; // Busca el ícono en el objeto skillIcons
+                                return (
+                                    <div key={index} className="proyecto-skill-item">
+                                        {icon ? ( // Verifica si el ícono existe antes de renderizar
+                                            <FontAwesomeIcon icon={icon} className="proyecto-skill-icon" />
+                                        ) : (
+                                            <span className="proyecto-skill-missing">Icono no disponible</span> // Texto alternativo si el ícono no existe
+                                        )}
+                                        <span>{skill}</span>
+                                    </div>
+                                );
+                            })}
                         </div>
 
                         <button className='proyecto-boton2' onClick={siguienteImagen}>{">"}</button>
