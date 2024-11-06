@@ -3,13 +3,12 @@ import "../../styles/home.css";
 import foto from "../../img/foto.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faAngleDoubleDown, faDownload, faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons'; // Importa faEnvelope desde free-solid-svg-icons
+import { faAngleDoubleDown, faDownload, faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import Skills from "../pages/Skills.js";
 import Proyectos from "./proyectos.js";
 import Contacto from "./Contacto.js";
 import Educacion from "./educacion.js";
 
-// Agrega el enlace de Gmail y el ícono correspondiente
 const socialLinks = [
     { icon: faLinkedin, url: "https://www.linkedin.com/in/luiscastillav30/" },
     { icon: faGithub, url: "https://github.com/luiscastillaPro" },
@@ -110,12 +109,12 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <ScrollIndicator />
-            <section id="educacion"><Educacion /></section>
             <ScrollIndicator1 />
             <section id="skills"><Skills /></section>
             <ScrollIndicator2 />
             <section id="proyectos"><Proyectos /></section>
+            <ScrollIndicator />
+            <section id="educacion"><Educacion /></section>
             <ScrollIndicator3 />
             <section id="contacto"><Contacto /></section>
         </div>

@@ -25,8 +25,8 @@ const Footer = () => {
             <p className="footer-text">
                 <FontAwesomeIcon icon={faPalette} /> Diseñado y construido por Luis Castilla
             </p>
-            <p className="footer-year">
-                &copy; {new Date().getFullYear()}
+            <p className="footer-year">¡Gracias por visitar! 
+                 &copy; {new Date().getFullYear()}
             </p>
             <div className="navbar-logo">
                 <span className="logo-white">Luis</span>

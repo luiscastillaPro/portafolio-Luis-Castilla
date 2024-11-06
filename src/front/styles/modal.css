@@ -14,9 +14,9 @@
 }
 
 .modal-content {
-    background: rgb(255, 255, 255);
-    padding: 10px 20px 20px 20px;
-    border-radius: 5px;
+    background: rgb(97, 97, 97);
+    padding: 0px 20px 20px 20px;
+    border-radius: 20px;
     width: 60vw !important;
     max-width: 90vw; /* Ajuste para que no exceda el viewport en pantallas pequeñas */
     max-height: 90vh; /* Asegura que no exceda la altura del viewport */
@@ -24,16 +24,17 @@
     animation: grow 0.5s forwards;
     overflow: auto;
     z-index: 10000;
-    color: rgb(0, 0, 0);
+    color: #e6e6e6;
 }
 
 .modal-title {
-    margin-bottom: 10px; /* Espacio entre el título y la imagen */
+    margin: 0 auto;
     font-family: "DM Serif Display", serif;
-    font-size: 3rem;
+    font-size: 4rem;
     text-align: center;
     font-weight: 600;
     color: #ff6600;
+    padding-left: 5rem;
 }
 
 .modalito{
@@ -44,15 +45,14 @@
 
 /* Ajustes para los elementos dentro del modal */
 .modal-proyect-caracteristi {
-    flex: 2; /* Aumenta el tamaño de este contenedor */
-    padding-right: 20px; /* Espacio entre ambos contenedores */
+    flex: 3; /* Aumenta el tamaño de este contenedor */
+    padding: 0 2rem 0 1rem; /* Espacio entre ambos contenedores */
 }
 
 .modal-proyect-details {
     flex: 1; /* Ocupa menos espacio en comparación con el contenedor izquierdo */
 }
 
-.modal-proyect-caracteristi,
 .modal-proyect-details {
     display: flex; /* Para que su contenido interno también use flexbox si es necesario */
     flex-direction: column; /* Para que los títulos y párrafos se alineen verticalmente */
@@ -60,9 +60,10 @@
 }
 
 .modal-proyect-details {
-    background-color: gainsboro;
+    background-color: rgb(10, 10, 10);
     border-radius: 20px;
     border: 1px solid rgb(202, 202, 202);
+    color: white;
 }
 
 .modal-proyect-details h5{
@@ -73,21 +74,34 @@
 
 .modal-proyect-details p{
     margin: 0;
+    font-weight: bold;
 }
 
 .close-button {
-    background: none;
+    background: linear-gradient(to right, #ff7e29, #ff2600);
+    border-radius: 30px;
+    padding: 8px 20px;
     border: none;
     font-size: 1rem;
     cursor: pointer;
-    float: right;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    align-self: center;
+    transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+    background-color: black; /* Un tono más oscuro al pasar el mouse */
+    color: black;
+    box-shadow: 0 0 15px rgba(255, 126, 41, 2); /* Sombra blanca */
 }
 
 .modal-image {
     width: 100%;
     height: auto;
-    border-radius: 5px;
-    border: 1px solid rgb(105, 105, 105);
+    border-radius: 15px;
+    border: 25px solid rgb(0, 0, 0);
 }
 
 .modal-description {
@@ -149,8 +163,26 @@
 .modal-propi1{
     border-bottom: 2px solid #ff6600;
     padding-bottom: 1rem;
+    font-weight: bold;
 }
 
 .modal-til{
     margin-bottom: 2rem;
+    font-family: "DM Serif Display", serif;
+    font-weight: 600;
+    text-align: center;
+    color: #ff6600;
+}
+
+.modal-proyect-caracteristi h2 {
+    font-weight: bold;
+    font-family: "DM Serif Display", serif;
+    color: #ff6600;
+}
+
+.modal-separador {
+    display: flex;
+    align-items: center; /* Alinea el título y el botón verticalmente en el centro */
+    justify-content: space-between; /* Coloca el título a la izquierda y el botón a la derecha */
+    width: 100%;
 }

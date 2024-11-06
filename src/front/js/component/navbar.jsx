@@ -36,7 +36,25 @@ const Navbar = () => {
                     activeClass="active" 
                     spy={true}
                 >
-                    Home
+                    Inicio
+                </Link>
+                <Link 
+                    to="skills" 
+                    smooth={true} 
+                    duration={500}
+                    activeClass="active" 
+                    spy={true}
+                >
+                    Habilidades
+                </Link>
+                <Link 
+                    to="proyectos" 
+                    smooth={true} 
+                    duration={500}
+                    activeClass="active" 
+                    spy={true}
+                >
+                    Proyectos
                 </Link>
                 <Link 
                     to="educacion" 
@@ -47,24 +65,6 @@ const Navbar = () => {
                     spy={true}
                 >
                     Educacion
-                </Link>
-                <Link 
-                    to="skills" 
-                    smooth={true} 
-                    duration={500}
-                    activeClass="active" 
-                    spy={true}
-                >
-                    Skills
-                </Link>
-                <Link 
-                    to="proyectos" 
-                    smooth={true} 
-                    duration={500}
-                    activeClass="active" 
-                    spy={true}
-                >
-                    Proyectos
                 </Link>
                 <Link 
                     to="contacto" 

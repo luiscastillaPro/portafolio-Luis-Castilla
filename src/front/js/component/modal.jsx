@@ -8,7 +8,11 @@ const Modal = ({ visible, onClose, title, imagenes, skills, proposito, funcional
     return ReactDOM.createPortal(
         <div className="modal-overlay" onClick={onClose}>
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                <div className="modal-separador">
                 <h1 className="modal-title">{title}</h1>
+                <button onClick={onClose} className="close-button" aria-label="Close modal">Volver</button>
+                </div>
+                
                 <img src={imagenes.length > 0 ? imagenes[0] : ""} alt={title} className="modal-image" />
                 <div className="modalito">
                     <div className="modal-proyect-caracteristi">
@@ -47,7 +51,6 @@ const Modal = ({ visible, onClose, title, imagenes, skills, proposito, funcional
                         <p>web aplication</p>
                     </div>
                 </div>
-                <button onClick={onClose} className="close-button" aria-label="Close modal">X</button>
             </div>
         </div>,
         document.body

@@ -57,7 +57,7 @@ const Skills = () => {
         <div id="skills" className="skills-container">
             <h2 className="skills-title fade-in">
                 <FaTools className="skills-icon" />
-                My Skills
+                Habilidades
             </h2>
             <div className="skills-content">
                 <div className="skills-left-column fade-in">
