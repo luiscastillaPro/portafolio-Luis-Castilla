@@ -1,57 +1,80 @@
+/* Contenedor principal */
 .skills-container {
-    padding: 7rem 0 0 0;
+    padding: 6rem 0 0 0;
     text-align: center;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
 }
 
-/* Clase común para animación de aparición */
-.fade-in {
-    opacity: 0; /* Inicialmente invisible */
-    transform: translateY(80px); /* Posicionada ligeramente más abajo */
-    transition: opacity 1s ease, transform 0.6s ease;
-}
-
-.fade-in.visible {
-    opacity: 1; /* Se vuelve visible al hacer scroll */
-    transform: translateY(0); /* Regresa a su posición original */
-}
-
-@keyframes slideIn {
-    0% {
-        transform: translateX(-10%) scale(0.9);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0) scale(1);
-        opacity: 1;
-    }
-}
-
-.skills-title {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    font-family: "DM Serif Display", serif;
-    color: white;
-    border-bottom: .4rem solid #ff6600;
-}
-
-.skill-cont-table {
+/* Contenedor de las columnas izquierda y derecha */
+.skills-content {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
     background-color: rgba(255, 255, 255, 0.18);
-    max-width: 900px;
     padding: 1.5rem;
     border-radius: 20px;
     border: 1px solid rgb(105, 105, 105);
 }
 
-.skills-table {
-    border-collapse: separate;
-    border-spacing: 30px;
+/* Columna izquierda (Skills) */
+.skills-left-column {
+    flex: 4; /* Asignar más ancho a la columna de habilidades */
+    padding: 1rem 0;
 }
 
-.skills-table td {
+/* Columna derecha (Imagen y Descripción) */
+.skills-right-column {
+    flex: 3; /* Reducir el ancho de la columna derecha */
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.18);
+    border-radius: 20px;
+    border: 1px solid rgb(105, 105, 105);
+}
+
+/* Título de skills */
+.skills-title {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    font-family: "DM Serif Display", serif;
+    color: white;
+    border-bottom: .4rem solid #ff6600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Icono de herramientas */
+.skills-icon {
+    color: #ff6600;
+    margin-right: 10px;
+    font-size: 3rem;
+}
+
+/* Contenedor de los elementos de skills */
+.skill-cont-table {
+    background-color: rgba(255, 255, 255, 0.18);
+    max-width: 775px;
+    padding: 1.5rem;
+    border-radius: 20px;
+    border: 1px solid rgb(105, 105, 105);
+}
+
+/* Tabla de skills */
+.skills-table {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Elementos individuales de skill */
+.skill-item {
     border: 1px solid white;
     padding: 10px;
     background-color: #ffffff;
@@ -60,12 +83,7 @@
     height: 150px;
     width: 120px;
     position: relative;
-    overflow: hidden; 
-}
-
-.skill-item {
-    text-align: center;
-    position: relative;
+    overflow: hidden;
 }
 
 .skills-table img {
@@ -74,6 +92,7 @@
     object-fit: contain;
 }
 
+/* Texto de cada habilidad */
 .skill-text {
     display: block;
     position: absolute;
@@ -90,7 +109,128 @@
 }
 
 /* Mostrar texto al pasar el mouse */
-.skills-table td:hover .skill-text {
-    bottom: 1px;
+.skill-item:hover .skill-text {
+    bottom: 10px;
     opacity: 1;
+}
+
+/* Imagen de la columna derecha */
+.responsive-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+/* Descripción de habilidades */
+.skills-description {
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Animación de fade-in desde abajo para los elementos */
+.fade-in {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: opacity 1s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animación de fade-in desde la derecha para la imagen */
+.fade-in-image {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.fade-in-image.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Animación de fade-in desde la derecha para el párrafo */
+.fade-in-paragraph {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.fade-in-paragraph.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Cambiar la dirección de flexión a columna para apilar los elementos */
+    .skills-content {
+        flex-direction: column; /* Cambiar a columna */
+        gap: 1.5rem; /* Espacio ajustado entre las columnas */
+        max-width: 600px;
+    }
+
+    /* Cambiar el orden de las columnas */
+    .skills-left-column {
+        order: 2; /* Hacer que la columna de habilidades aparezca después */
+        flex: 1; /* Establecer la flexibilidad para que ocupe todo el ancho disponible */
+    }
+
+    .skills-right-column {
+        order: 1; /* Hacer que la columna de imagen y descripción aparezca primero */
+        flex: 1; /* Establecer la flexibilidad para que ocupe todo el ancho disponible */
+    }
+
+    /* Ajustes adicionales para mejorar la apariencia en pantallas pequeñas */
+    .skills-title {
+        font-size: 2.5rem; /* Reducir tamaño del título */
+        margin-bottom: 3rem; /* Reducir margen inferior */
+    }
+
+    .skills-description {
+        font-size: 0.9rem; /* Reducir el tamaño de la descripción */
+        margin-bottom: 1rem; /* Ajustar el margen inferior */
+    }
+
+    .responsive-image {
+        max-width: 100%; /* Asegurarse de que la imagen no exceda el ancho disponible */
+    }
+
+    .skill-item {
+        width: 100px; /* Reducir el tamaño de los items de habilidades */
+        height: 120px; /* Reducir altura */
+    }
+}
+
+@media (max-width: 430px) {
+    .skills-content {
+        width: 90vw;
+    }
+
+    .skills-table{
+        width: 90vw;
+        justify-content: left;
+    }
+
+    .skill-item {
+        width: 80px; /* Reducir el tamaño de los items de habilidades */
+        height: 100px; /* Reducir altura */
+    }
+}
+
+@media (max-width: 360px) {
+    .skills-content {
+        max-width: 90vw;
+    }
+
+    .skills-table{
+        width: 90vw;
+        justify-content: start;
+    }
 }
