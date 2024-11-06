@@ -57,3 +57,44 @@
   vertical-align: middle; /* Alineación vertical con el texto */
   margin-bottom: 10px;
 }
+
+@media (max-width: 760px) {
+
+  .proyectos-contain {
+      padding: none; /* Ajustar el padding para pantallas pequeñas */
+  }
+
+  .proyectos-container {
+      display: flex;
+      flex-direction: column; /* Coloca los elementos en columna */
+      gap: 2rem; /* Reducir el espacio entre proyectos */
+      padding: 10px;
+  }
+
+  .proyectos-title {
+      font-size: 2.5rem; /* Reducir el tamaño del título */
+      margin: 2rem 0 1rem 0; /* Ajustar el margen */
+      border-bottom: 0.3rem solid #ff6600; /* Ajustar grosor de la línea */
+  }
+
+  .projects-icon {
+      font-size: 2.5rem; /* Reducir tamaño del icono */
+      margin-bottom: 8px;
+  }
+
+  /* Ajustar la animación en pantallas pequeñas si es necesario */
+  @keyframes slideIn {
+      from {
+          transform: translateY(-10px);
+          opacity: 0;
+      }
+      to {
+          transform: translateY(0);
+          opacity: 1;
+      }
+  }
+
+  .fade-in.slide-right {
+      animation: slideInRight 0.5s ease; /* Ajustar la velocidad de la animación */
+  }
+}

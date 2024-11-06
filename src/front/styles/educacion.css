@@ -189,3 +189,37 @@
 .experiencia-item.slide-out-right {
     animation: slideOutRight 2s forwards; /* Aplica animación de salida desde la derecha */
 }
+
+/* Media Queries para dispositivos móviles y tabletas */
+@media (max-width: 768px) {
+    .educacion-container {
+        flex-direction: column; /* Cambia la dirección de las columnas a fila en pantallas pequeñas */
+        width: 90%;
+    }
+
+    .col {
+        flex: 1 100%; /* Las columnas ocupan el 100% del ancho */
+        margin-bottom: 2rem;
+        padding: 0;
+    }
+
+    .titulo-educacion,
+    .titulo-experiencia {
+        font-size: 2.5rem; /* Ajustar tamaño de los títulos */
+    }
+
+    .educacion-info h3,
+    .experiencia-info h3 {
+        font-size: 1.2rem; /* Reducir tamaño de los títulos dentro de los items */
+    }
+
+    .educacion-info span,
+    .experiencia-info span {
+        font-size: 0.9rem; /* Reducir tamaño de las fechas */
+    }
+
+    .educacion-info p,
+    .experiencia-info p {
+        font-size: 0.9rem; /* Reducir el tamaño de la descripción */
+    }
+}

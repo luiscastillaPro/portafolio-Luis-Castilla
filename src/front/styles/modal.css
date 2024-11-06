@@ -17,7 +17,7 @@
     background: rgb(97, 97, 97);
     padding: 0px 20px 20px 20px;
     border-radius: 20px;
-    width: 60vw !important;
+    width: 60vw;
     max-width: 90vw; /* Ajuste para que no exceda el viewport en pantallas pequeñas */
     max-height: 90vh; /* Asegura que no exceda la altura del viewport */
     box-sizing: border-box;
@@ -185,4 +185,84 @@
     align-items: center; /* Alinea el título y el botón verticalmente en el centro */
     justify-content: space-between; /* Coloca el título a la izquierda y el botón a la derecha */
     width: 100%;
+}
+
+@media (max-width: 760px) {
+
+    /* Overlay del modal */
+    .modal-overlay {
+        padding: 10px; /* Añadir un pequeño padding para evitar que el modal toque los bordes */
+    }
+
+    /* Contenedor principal del modal */
+    .modal-content {
+        width: 90vw; /* Hacer que el modal ocupe la mayoría del ancho de la pantalla */
+        padding: 10px; /* Reducir el padding en pantallas pequeñas */
+        max-height: 80vh; /* Ajustar altura máxima para evitar scroll */
+        overflow-y: auto; /* Habilitar scroll si el contenido es muy largo */
+    }
+
+    /* Título del modal */
+    .modal-title {
+        font-size: 2.5rem; /* Reducir tamaño de fuente del título */
+        padding-left: 0; /* Eliminar el padding a la izquierda */
+    }
+
+    /* Ajuste de la disposición interna */
+    .modalito {
+        flex-direction: column; /* Cambiar la disposición a columna para pantallas pequeñas */
+        align-items: center; /* Centrar el contenido en modo columna */
+    }
+
+    /* Contenedores internos */
+    .modal-proyect-caracteristi, .modal-proyect-details {
+        width: 100%; /* Hacer que ambos contenedores ocupen todo el ancho disponible */
+        padding: 10px; /* Reducir el padding en contenedores internos */
+        margin-bottom: 20px; /* Separación entre secciones */
+    }
+
+    /* Imagen en el modal */
+    .modal-image {
+        width: 100%; /* Hacer que la imagen ocupe todo el ancho */
+        height: auto; /* Mantener la proporción de la imagen */
+        border: 5px solid rgb(0, 0, 0); /* Reducir el borde en pantallas pequeñas */
+    }
+
+    /* Botón de cierre */
+    .close-button {
+        font-size: 0.9rem; /* Reducir tamaño del botón */
+        padding: 6px 16px; /* Ajustar el padding del botón */
+    }
+
+    /* Botón de información (info-button) */
+    .info-button {
+        font-size: 1.5rem; /* Reducir el tamaño del ícono de información */
+    }
+
+    /* Lista de habilidades */
+    .skills-list li {
+        font-size: 0.9rem; /* Reducir el tamaño de fuente de las habilidades */
+    }
+
+    /* Separador del título */
+    .modal-separador {
+        align-items: flex-start; /* Alinear título y botón a la izquierda */
+        gap: 10px; /* Espacio entre el título y el botón */
+    }
+
+    /* Título en la sección de características */
+    .modal-proyect-caracteristi h2 {
+        font-size: 1.5rem; /* Reducir el tamaño de fuente */
+        text-align: center; /* Centrar el título */
+    }
+
+    /* Ajuste para textos en la sección de detalles */
+    .modal-proyect-details h5 {
+        font-size: 1.2rem; /* Ajustar tamaño de fuente */
+        text-align: center; /* Centrar el texto */
+    }
+
+    .modal-proyect-details p {
+        font-size: 0.9rem; /* Ajustar tamaño de fuente para párrafos */
+    }
 }

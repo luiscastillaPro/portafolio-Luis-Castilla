@@ -237,3 +237,74 @@
   font-size: 1rem;
   margin-right: 3px;
 }
+
+@media (max-width: 760px) {
+
+  /* Ajuste del ancho de la tarjeta */
+  .proyecto-card {
+      width: 100%; /* Hacer que ocupe casi todo el ancho de la pantalla */
+      padding: 12px; /* Reducir el padding */
+      margin: 0 auto; /* Centrar la tarjeta */
+      border-radius: 15px; /* Ajuste en los bordes redondeados */
+  }
+
+  /* Título del proyecto */
+  .proyecto-titul {
+      font-size: 1.5rem; /* Reducir el tamaño del título */
+      margin-left: 0; /* Eliminar margen a la izquierda */
+  }
+
+  /* Descripción del proyecto */
+  .proyecto-descrip {
+      font-size: 0.9rem; /* Reducir el tamaño de la fuente */
+      margin-bottom: 10px; /* Ajustar el margen inferior */
+  }
+
+  /* Carrusel de imágenes */
+  .proyecto-carrusel {
+      height: 200px; /* Reducir la altura del carrusel */
+  }
+
+  .proyecto-imagen {
+      border-radius: 6px; /* Ajustar los bordes redondeados de las imágenes */
+  }
+
+  /* Botones de navegación del carrusel */
+  .proyecto-carrusel button {
+      font-size: 2.5rem; /* Reducir tamaño de los botones de navegación */
+      padding: 5px 10px; /* Reducir el padding de los botones */
+  }
+
+  /* Botones para ver el sitio en live y el código */
+  .proyecto-boton3,
+  .proyecto-boton4 {
+      font-size: 0.9rem; /* Reducir el tamaño de los botones */
+      padding: 6px 16px; /* Ajustar el padding */
+  }
+
+  
+
+  /* Círculos indicadores de posición en el carrusel */
+  .circulos {
+      margin: 8px 0; /* Ajustar margen para pantallas pequeñas */
+  }
+
+  .circulo {
+      width: 10px; /* Reducir el tamaño de los círculos */
+      height: 10px;
+  }
+
+  /* Ajuste para el overlay de habilidades */
+  .proyecto-skills-overlay {
+      font-size: 0.9rem; /* Reducir tamaño de las habilidades */
+      padding: 8px; /* Reducir padding */
+      justify-content: center; /* Centrar habilidades */
+  }
+
+  /* Skills individuales dentro del overlay */
+  .proyecto-skill-item {
+      font-size: 0.7rem; /* Reducir tamaño de la fuente de las skills */
+      padding: 4px; /* Ajustar padding de cada skill */
+      margin-right: 4px; /* Ajustar espacio entre skills */
+  }
+}
