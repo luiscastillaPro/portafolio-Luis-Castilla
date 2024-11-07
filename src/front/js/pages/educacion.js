@@ -12,32 +12,32 @@ const Educacion = () => {
             educacionItems.forEach((item) => {
                 const rect = item.getBoundingClientRect();
                 if (rect.top < window.innerHeight - 150 && rect.bottom >= 0) {
-                    item.classList.add("visible"); // Agregar clase para animación de entrada
-                    item.classList.remove("slide-out-left"); // Asegurarse de que no se aplique la clase de salida
-                    item.classList.add("slide-in-left"); // Animación desde la izquierda
+                    item.classList.add("visible");
+                    item.classList.remove("slide-out-left");
+                    item.classList.add("slide-in-left");
                 } else {
                     item.classList.remove("visible");
-                    item.classList.add("slide-out-left"); // Animación de salida
-                    item.classList.remove("slide-in-left"); // Asegurarse de que no se aplique la clase de entrada
+                    item.classList.add("slide-out-left");
+                    item.classList.remove("slide-in-left");
                 }
             });
 
             experienciaItems.forEach((item) => {
                 const rect = item.getBoundingClientRect();
                 if (rect.top < window.innerHeight - 150 && rect.bottom >= 0) {
-                    item.classList.add("visible"); // Agregar clase para animación de entrada
-                    item.classList.remove("slide-out-right"); // Asegurarse de que no se aplique la clase de salida
-                    item.classList.add("slide-in-right"); // Animación desde la derecha
+                    item.classList.add("visible");
+                    item.classList.remove("slide-out-right");
+                    item.classList.add("slide-in-right");
                 } else {
                     item.classList.remove("visible");
-                    item.classList.add("slide-out-right"); // Animación de salida
-                    item.classList.remove("slide-in-right"); // Asegurarse de que no se aplique la clase de entrada
+                    item.classList.add("slide-out-right");
+                    item.classList.remove("slide-in-right");
                 }
             });
         };
 
         window.addEventListener("scroll", handleScroll);
-        handleScroll(); // Ejecutar al cargar el componente
+        handleScroll();
 
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);

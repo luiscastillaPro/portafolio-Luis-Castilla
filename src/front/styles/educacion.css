@@ -1,4 +1,3 @@
-/* Contenedor Principal */
 .educacion-container {
     padding: 20px;
     margin: 10rem auto 4rem;
@@ -15,7 +14,6 @@
     flex: 1;
 }
 
-/* Títulos */
 .titulo-educacion,
 .titulo-experiencia {
     text-align: center;
@@ -36,14 +34,12 @@
     margin: 10px auto 0;
 }
 
-/* Iconos */
 .icono-educacion,
 .icono-experiencia {
-    color: #ff6600; /* Color naranja */
-    margin-right: 10px; /* Espaciado a la derecha */
+    color: #ff6600;
+    margin-right: 10px;
 }
 
-/* Items de Educación y Experiencia */
 .educacion-item,
 .experiencia-item {
     display: flex;
@@ -55,7 +51,6 @@
     position: relative;
 }
 
-/* Información de Educación y Experiencia */
 .educacion-info h3,
 .experiencia-info h3 {
     margin: 0;
@@ -83,7 +78,6 @@
     margin-left: 1rem;
 }
 
-/* Estilos de Icono Circular y Línea */
 ._circleContainer_1u4ch_75 {
     display: flex;
     flex-direction: column;
@@ -103,14 +97,13 @@
 
 ._line_1u4ch_105 {
     width: 8px;
-    height: 60%; /* Cambiar a un tamaño relativo */
+    height: 60%;
     background-color: #000000;
-    position: absolute; /* Cambiar a absolute para que se coloque correctamente */
-    top: 36px; /* Colocado debajo del círculo */
-    z-index: 0; /* Asegura que la línea esté detrás del círculo */
+    position: absolute;
+    top: 36px;
+    z-index: 0;
 }
 
-/* Animación de entrada desde la izquierda */
 @keyframes slideInLeft {
     from {
         transform: translateX(-100px);
@@ -122,7 +115,6 @@
     }
 }
 
-/* Animación de entrada desde la derecha */
 @keyframes slideInRight {
     from {
         transform: translateX(100px);
@@ -134,30 +126,26 @@
     }
 }
 
-/* Aplicar animaciones a los elementos */
 .educacion-item.slide-in-left {
-    animation: slideInLeft 2s forwards; /* Aplica animación desde la izquierda */
+    animation: slideInLeft 2s forwards;
 }
 
 .experiencia-item.slide-in-right {
-    animation: slideInRight 2s forwards; /* Aplica animación desde la derecha */
+    animation: slideInRight 2s forwards;
 }
 
-/* Estilo base para educacion-item y experiencia-item */
 .educacion-item,
 .experiencia-item {
-    opacity: 0; /* Inicialmente oculto */
-    transition: opacity 2s ease; /* Transición suave */
+    opacity: 0;
+    transition: opacity 2s ease;
 }
 
-/* Estilo visible */
 .educacion-item.visible,
 .experiencia-item.visible {
-    opacity: 1; /* Hacer visible */
+    opacity: 1;
     transition: opacity 2s ease; 
 }
 
-/* Animación de salida desde la izquierda */
 @keyframes slideOutLeft {
     from {
         transform: translateX(0);
@@ -169,7 +157,6 @@
     }
 }
 
-/* Animación de salida desde la derecha */
 @keyframes slideOutRight {
     from {
         transform: translateX(0);
@@ -181,45 +168,40 @@
     }
 }
 
-/* Aplicar animaciones de salida a los elementos */
 .educacion-item.slide-out-left {
-    animation: slideOutLeft 2s forwards; /* Aplica animación de salida desde la izquierda */
+    animation: slideOutLeft 2s forwards;
 }
 
 .experiencia-item.slide-out-right {
-    animation: slideOutRight 2s forwards; /* Aplica animación de salida desde la derecha */
+    animation: slideOutRight 2s forwards;
 }
 
-/* Media Queries para dispositivos móviles y tabletas */
 @media (max-width: 768px) {
     .educacion-container {
-        flex-direction: column; /* Cambia la dirección de las columnas a fila en pantallas pequeñas */
+        flex-direction: column;
         width: 90%;
     }
 
     .col {
-        flex: 1 100%; /* Las columnas ocupan el 100% del ancho */
+        flex: 1 100%;
         margin-bottom: 2rem;
         padding: 0;
     }
 
     .titulo-educacion,
     .titulo-experiencia {
-        font-size: 2.5rem; /* Ajustar tamaño de los títulos */
+        font-size: 2.5rem;
     }
 
     .educacion-info h3,
     .experiencia-info h3 {
-        font-size: 1.2rem; /* Reducir tamaño de los títulos dentro de los items */
-    }
-
-    .educacion-info span,
-    .experiencia-info span {
-        font-size: 0.9rem; /* Reducir tamaño de las fechas */
+        font-size: 1.2rem;
     }
 
     .educacion-info p,
-    .experiencia-info p {
-        font-size: 0.9rem; /* Reducir el tamaño de la descripción */
+    .experiencia-info p,
+    .educacion-info span,
+    .experiencia-info span {
+        font-size: 0.9rem;
     }
 }

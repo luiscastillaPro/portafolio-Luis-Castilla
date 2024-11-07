@@ -25,7 +25,7 @@ const ProyectoCard = ({ proyecto, extraClass }) => {
         }
     };
 
-    const { titulo, imagenes = [], liveLink, codigoLink, skills, proposito, funcionalidad, tecnologias } = proyecto;
+    const { titulo, imagenes = [], liveLink, codigoLink, skills, proposito, funcionalidad, tecnologias, tipo } = proyecto;
 
     // Mapa de íconos para las habilidades
     const skillIcons = {
@@ -105,6 +105,7 @@ const ProyectoCard = ({ proyecto, extraClass }) => {
                         proposito={proposito}
                         funcionalidad={funcionalidad}
                         tecnologias={tecnologias}
+                        tipo={tipo}
                     />
                 </>
             )}

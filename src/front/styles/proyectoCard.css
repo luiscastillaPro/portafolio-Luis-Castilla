@@ -1,4 +1,3 @@
- /* Estilo base para .proyecto-card */
  .proyecto-card {
   width: 600px;
   height: auto;
@@ -9,33 +8,31 @@
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   background-color: rgba(255, 255, 255, 0.18);
   opacity: 0;
-  transform: translateX(-200px); /* Entrada desde la izquierda por defecto */
+  transform: translateX(-200px);
   transition: opacity 1s ease, transform 2s ease;
 }
 
-/* Estilo cuando el elemento es visible */
 .proyecto-card.visible {
   opacity: 1;
-  transform: translateX(0); /* Posición final una vez visible */
+  transform: translateX(0); 
 }
 
-/* Estilo para .slide-right */
 .proyecto-card.slide-right {
-  transform: translateX(200px); /* Entrada desde la derecha */
+  transform: translateX(200px);
 }
 
 .proyecto-card.slide-right.visible {
   opacity: 1;
-  transform: translateX(0); /* Posición final una vez visible */
+  transform: translateX(0);
 }
 
 .proyecto-titul {
   font-size: 2rem;
   color: #ff6600;
   margin: 0 0 10px 0;
-  font-weight: 600; /* Estilo de título más audaz */
+  font-weight: 600;
   font-family: "DM Serif Display", serif;
-  margin-left: 15rem;
+  margin-left: 13rem;
 }
 
 .proyecto-descrip {
@@ -44,7 +41,6 @@
   margin-bottom: 15px;
 }
 
-/* Carrusel de imágenes */
 .proyecto-carrusel {
   position: relative;
   width: 100%;
@@ -61,45 +57,40 @@
   border: 1px solid black;
 }
 
-/* Botones de navegación del carrusel */
 .proyecto-carrusel button {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%); /* Mantener centrado verticalmente */
-  background: rgba(0, 0, 0, 0); /* Fondo transparente */
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0);
   color: #ff6600;
   border: none;
   padding: 10px 15px;
   cursor: pointer;
   font-size: 3.5rem;
-  border-radius: 4px; /* Bordes redondeados */
-  animation: moveButton 0.7s ease-in-out infinite; /* Movimiento continuo */
+  border-radius: 4px;
+  animation: moveButton 0.7s ease-in-out infinite;
 }
 
-/* Botón de la izquierda */
 .proyecto-carrusel button:first-of-type {
   left: -15px;
 }
 
-/* Botón de la derecha */
 .proyecto-carrusel button:last-of-type {
   right: -15px;
 }
 
-/* Animación para movimiento continuo */
 @keyframes moveButton {
   0%, 100% {
-    transform: translateY(-50%) translateX(0); /* Posición inicial y final */
+    transform: translateY(-50%) translateX(0);
   }
   50% {
-    transform: translateY(-50%) translateX(-5px); /* Mover a la izquierda en la mitad de la animación */
+    transform: translateY(-50%) translateX(-5px);
   }
 }
 
-/* Botones para ver sitio en live y código */
 .proyecto-botones {
   display: flex;
-  justify-content: space-around; /* Espacio uniforme entre botones */
+  justify-content: space-around;
   margin-top: 10px;
 }
 
@@ -107,30 +98,29 @@
 .proyecto-boton4 {
   background: linear-gradient(to right, #ff7e29, #ff2600);
   color: white;
-  border: none; /* Sin borde */
+  border: none;
   text-decoration: none;
-  padding: 8px 20px; /* Aumentar el padding para botones más grandes */
+  padding: 8px 20px;
   border-radius: 30px;
   font-size: 1rem;
-  text-align: center; /* Centrar texto */
-  display: inline-block; /* Para que el padding y el texto se alineen correctamente */
+  text-align: center;
+  display: inline-block;
   transition: background-color 0.3s ease;
   font-weight: 600;
 }
 
 .proyecto-boton3:hover,
 .proyecto-boton4:hover {
-  transform: scale(1.05); /* Efecto de escalado en hover */
+  transform: scale(1.05);
   color: black;
 }
 
 .proyecto-sin {
   color: red;
   font-weight: bold;
-  animation: fadeIn 0.5s ease; /* Animación de entrada */
+  animation: fadeIn 0.5s ease;
 }
 
-/* Animación de entrada */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -140,24 +130,23 @@
   }
 }
 
-/* Estilo para los círculos */
 .circulos {
-  display: flex; /* Usamos flexbox para alinear los círculos */
-  justify-content: center; /* Centrar horizontalmente */
-  margin: 10px 0; /* Espaciado vertical */
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
 }
 
 .circulo {
-  width: 12px; /* Ancho de los círculos */
-  height: 12px; /* Alto de los círculos */
-  border-radius: 50%; /* Hacerlos circulares */
-  background-color: #ccc; /* Color por defecto */
-  margin: 0 5px; /* Espaciado entre círculos */
-  transition: background-color 0.3s ease; /* Suave transición al cambiar de color */
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
 }
 
 .circulo.activo {
-  background-color: #ff6600; /* Color para el círculo activo */
+  background-color: #ff6600;
 }
 
 .proyecto-informativo {
@@ -165,25 +154,15 @@
   justify-content: space-between;
 }
 
-.iconito {
-  margin-bottom: 10px;
-  margin-left: 10px;
-}
-
-.proyecto-icona {
-  margin-right: 7px;
-}
-
-.proyecto-textico{
-  font-size: 1rem;
-}
+.iconito { margin-bottom: 10px; margin-left: 10px; }
+.proyecto-icona { margin-right: 7px; }
+.proyecto-textico { font-size: 1rem; }
 
 .info-button{
   display: flex;
   font-weight: 600;
 }
 
-/* Contenedor de skills oculto por defecto */
 .proyecto-skills-overlay {
   position: absolute;
   bottom: 0;
@@ -200,25 +179,14 @@
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   display: flex;
-  justify-content: start; /* Espacio uniforme entre habilidades */
+  justify-content: start;
 }
 
-/* Estilo para mostrar el overlay al hacer hover */
 .proyecto-skills-overlay.show {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Ajustes para el contenedor de carrusel */
-.proyecto-carrusel {
-  position: relative;
-  width: 100%;
-  height: 280px;
-  overflow: hidden;
-  margin-bottom: 10px;
-}
-
-/* Estilos para cada skill como botón */
 .proyecto-skill-item {
   display: flex;
   align-items: center;
@@ -232,7 +200,7 @@
   transition: background-color 0.3s ease;
   margin-right: 5px;
 }
-/* Estilos para el ícono dentro de cada skill */
+
 .proyecto-skill-icon {
   font-size: 1rem;
   margin-right: 3px;
@@ -240,71 +208,51 @@
 
 @media (max-width: 760px) {
 
-  /* Ajuste del ancho de la tarjeta */
   .proyecto-card {
-      width: 100%; /* Hacer que ocupe casi todo el ancho de la pantalla */
-      padding: 12px; /* Reducir el padding */
-      margin: 0 auto; /* Centrar la tarjeta */
-      border-radius: 15px; /* Ajuste en los bordes redondeados */
+      width: 100%;
+      padding: 12px;
+      margin: 0 auto;
+      border-radius: 15px;
   }
 
-  /* Título del proyecto */
   .proyecto-titul {
-      font-size: 1.5rem; /* Reducir el tamaño del título */
-      margin-left: 0; /* Eliminar margen a la izquierda */
+      font-size: 1.5rem; 
+      margin-left: 0;
   }
 
-  /* Descripción del proyecto */
-  .proyecto-descrip {
-      font-size: 0.9rem; /* Reducir el tamaño de la fuente */
-      margin-bottom: 10px; /* Ajustar el margen inferior */
-  }
+  .proyecto-descrip { font-size: 0.9rem; margin-bottom: 10px; }
+  .proyecto-carrusel { height: 200px; }
+  .proyecto-imagen { border-radius: 6px; }
 
-  /* Carrusel de imágenes */
-  .proyecto-carrusel {
-      height: 200px; /* Reducir la altura del carrusel */
-  }
-
-  .proyecto-imagen {
-      border-radius: 6px; /* Ajustar los bordes redondeados de las imágenes */
-  }
-
-  /* Botones de navegación del carrusel */
   .proyecto-carrusel button {
-      font-size: 2.5rem; /* Reducir tamaño de los botones de navegación */
-      padding: 5px 10px; /* Reducir el padding de los botones */
+      font-size: 2.5rem;
+      padding: 5px 10px;
   }
 
-  /* Botones para ver el sitio en live y el código */
   .proyecto-boton3,
   .proyecto-boton4 {
-      font-size: 0.9rem; /* Reducir el tamaño de los botones */
-      padding: 6px 16px; /* Ajustar el padding */
+      font-size: 0.9rem;
+      padding: 6px 16px;
   }
 
-  
-
-  /* Círculos indicadores de posición en el carrusel */
   .circulos {
-      margin: 8px 0; /* Ajustar margen para pantallas pequeñas */
+      margin: 8px 0;
   }
 
   .circulo {
-      width: 10px; /* Reducir el tamaño de los círculos */
+      width: 10px;
       height: 10px;
   }
 
-  /* Ajuste para el overlay de habilidades */
   .proyecto-skills-overlay {
-      font-size: 0.9rem; /* Reducir tamaño de las habilidades */
-      padding: 8px; /* Reducir padding */
-      justify-content: center; /* Centrar habilidades */
+      font-size: 0.9rem;
+      padding: 8px;
+      justify-content: center;
   }
 
-  /* Skills individuales dentro del overlay */
   .proyecto-skill-item {
-      font-size: 0.7rem; /* Reducir tamaño de la fuente de las skills */
-      padding: 4px; /* Ajustar padding de cada skill */
-      margin-right: 4px; /* Ajustar espacio entre skills */
+      font-size: 0.7rem;
+      padding: 4px;
+      margin-right: 4px;
   }
 }

@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import "../../styles/navbar.css";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons"; // Ícono para el menú hamburguesa
-import { faTimes } from "@fortawesome/free-solid-svg-icons"; // Ícono para cerrar el menú
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
-    const [isMenuOpen, setIsMenuOpen] = useState(false); // Estado para controlar el menú desplegable
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -22,9 +22,8 @@ const Navbar = () => {
         scroll.scrollToTop({ duration: 500, smooth: true });
     };
 
-    // Función para alternar el estado del menú
     const toggleMenu = () => {
-        setIsMenuOpen((prevState) => !prevState); // Cambia el estado cuando se hace clic
+        setIsMenuOpen((prevState) => !prevState);
     };
 
     return (

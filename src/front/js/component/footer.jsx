@@ -7,7 +7,7 @@ import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 const socialLinks = [
     { icon: faLinkedin, url: "https://www.linkedin.com/in/luiscastillav30/" },
     { icon: faGithub, url: "https://github.com/luiscastillaPro" },
-    { icon: faEnvelope, url: "mailto:tucorreo@gmail.com" } // Cambia "tucorreo@gmail.com" por tu dirección real
+    { icon: faEnvelope, url: "mailto:luis.castillav30@gmail.com" }
 ];
 
 const Footer = () => {
