@@ -13,21 +13,16 @@ const Layout = () => {
     if (!process.env.BACKEND_URL || process.env.BACKEND_URL === "") return <BackendURL />;
 
     return (
-        <div>
-            <BrowserRouter basename={basename}>
-                <ParticlesBackground />
-                <div style={{ position: 'relative', zIndex: 1 }}>
-                    <Navbar />
-                    <Routes>
-                        <Route element={<Home />} path="/" />
-                        <Route element={<h1>Not found!</h1>} path="*" />
-                    </Routes>
-                    <Footer />
-                </div>
-            </BrowserRouter>
-        </div>
+        <BrowserRouter basename={basename}>
+            <ParticlesBackground />
+            <Navbar />
+            <Routes>
+                <Route element={<Home />} path="/" />
+                <Route element={<h1>Not found!</h1>} path="*" />
+            </Routes>
+            <Footer />
+        </BrowserRouter>
     );
-    
 };
 
 export default injectContext(Layout);

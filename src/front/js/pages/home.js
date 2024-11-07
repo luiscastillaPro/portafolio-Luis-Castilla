@@ -12,7 +12,7 @@ import Educacion from "./educacion.js";
 const socialLinks = [
     { icon: faLinkedin, url: "https://www.linkedin.com/in/luiscastillav30/" },
     { icon: faGithub, url: "https://github.com/luiscastillaPro" },
-    { icon: faEnvelope, url: "mailto:tuemail@gmail.com" } // Reemplaza "tuemail@gmail.com" con tu correo real
+    { icon: faEnvelope, url: "mailto:luis.castillav30@gmail.com" }
 ];
 
 const Home = () => {

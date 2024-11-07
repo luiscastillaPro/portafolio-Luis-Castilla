@@ -4,8 +4,8 @@
     align-items: center;
     justify-content: center;
     padding: 0 0 20px 0;
-    background-color: rgba(255, 255, 255, 0.18); /* Fondo inicial transparente */
-    color: #ffffff; /* Color de texto blanco */
+    background-color: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
     font-family: Arial, sans-serif;
     font-size: 14px;
     border-top: 1px solid rgb(105, 105, 105);
@@ -14,24 +14,24 @@
 .footer-text {
     display: flex;
     align-items: center;
-    gap: 8px; /* Espacio entre el icono de paleta y el texto */
-    margin: 0; /* Eliminar márgenes para una mejor alineación */
+    gap: 8px;
+    margin: 0;
     margin-top: 10px;
 }
 
 .footer-text .fa-palette {
-    color: #ff6600; /* Color del ícono de paleta */
+    color: #ff6600;
 }
 
 .footer-year {
-    margin: 0; /* Eliminar márgenes para alineación */
-    margin-top: 5px; /* Separación entre el texto principal y el año */
+    margin: 0;
+    margin-top: 5px;
     font-size: 14px;
     color: #ffffff;
 }
 
 .navbar-logo {
-    margin-top: 10px; /* Espacio adicional entre el año y el logo */
+    margin-top: 10px;
     display: flex;
     align-items: center;
 }
@@ -42,6 +42,6 @@
 }
 
 .logo-orange {
-    color: #ff6600; /* Color para la palabra "coded." */
+    color: #ff6600;
     font-weight: bold;
 }

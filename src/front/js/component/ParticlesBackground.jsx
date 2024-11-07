@@ -1,4 +1,3 @@
-// src/front/js/ParticlesBackground.js
 import React, { useEffect } from 'react';
 
 const ParticlesBackground = () => {

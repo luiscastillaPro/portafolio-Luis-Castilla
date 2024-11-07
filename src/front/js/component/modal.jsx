@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "../../styles/modal.css";
 
-const Modal = ({ visible, onClose, title, imagenes, skills, proposito, funcionalidad, tecnologias }) => {
+const Modal = ({ visible, onClose, title, imagenes, skills, proposito, funcionalidad, tecnologias, tipo }) => {
     if (!visible) return null;
 
     return ReactDOM.createPortal(
@@ -17,17 +17,13 @@ const Modal = ({ visible, onClose, title, imagenes, skills, proposito, funcional
                 <div className="modalito">
                     <div className="modal-proyect-caracteristi">
                         <h2>Propósito del sitio web</h2>
-                        <p>
-                            {proposito}
-                        </p>
-
+                        <p>{proposito}</p>
                         <h2>Funcionalidad del sitio web</h2>
                         <p>
                         {funcionalidad && funcionalidad.map((funcionalidad, index) => (
                                 <li key={index}>{funcionalidad}</li>
                             ))}
                         </p>
-
                         <h2>Tecnologías utilizadas</h2>
                         <p>
                         {tecnologias && tecnologias.map((tecnologias, index) => (
@@ -48,7 +44,7 @@ const Modal = ({ visible, onClose, title, imagenes, skills, proposito, funcional
                             ))}
                         </ul>
                         <h5>Categoría:</h5>
-                        <p>web aplication</p>
+                        <p>{tipo}</p>
                     </div>
                 </div>
             </div>

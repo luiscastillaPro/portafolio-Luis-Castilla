@@ -1,4 +1,3 @@
-/* Estilos base para la navbar */
 .navbar {
     display: flex;
     justify-content: space-around;
@@ -10,36 +9,20 @@
     transition: background-color 0.3s ease;
     z-index: 1000;
     background-color: rgba(255, 255, 255, 0.18);
-    /* Fondo inicial transparente */
     color: white;
-    /* Color inicial de texto */
     border-bottom: 1px solid rgb(105, 105, 105);
     animation: slideIn 1s ease forwards;
 }
 
 @keyframes slideIn {
-    0% {
-        transform: translateX(-10%) scale(0.9);
-        /* Empieza fuera de la pantalla a la izquierda y más pequeño */
-        opacity: 0;
-        /* Totalmente transparente */
-    }
-
-    100% {
-        transform: translateX(0) scale(1);
-        /* Termina en su posición original y tamaño normal */
-        opacity: 1;
-        /* Totalmente visible */
-    }
+    0% { transform: translateX(-10%) scale(0.9); opacity: 0; }
+    100% { transform: translateX(0) scale(1); opacity: 1; }
 }
 
-/* Clase para el fondo cuando la navbar se vuelve fija */
 .navbar-scrolled {
     background: linear-gradient(to right, #ff7e29, #ff2600);
-    /* Naranja vibrante */
 }
 
-/* Logo y estilos de enlace */
 .navbar-logo {
     font-size: 1.5rem;
     font-weight: bold;
@@ -59,13 +42,10 @@
     -webkit-text-fill-color: transparent;
 }
 
-/* Nueva clase para el logo negro */
 .logo-black {
     color: black;
-    /* Cambia a negro cuando se hace scroll */
 }
 
-/* Estilo de los enlaces */
 .navbar-links {
     display: flex;
     gap: 2rem;
@@ -78,40 +58,29 @@
     transition: color 0.2s ease, border-bottom 0.2s ease;
     font-size: 15px;
     position: relative;
-    /* Necesario para posicionar el borde */
     box-sizing: border-box;
-    /* Añade un poco de espacio para el borde */
     border-bottom: 0.3rem solid transparent;
     cursor: pointer;
 }
 
-/* Color de los enlaces al pasar el mouse por encima */
 .navbar-links a:hover {
     color: #ff6600;
-    /* Naranja brillante al pasar el mouse */
     border-bottom: 0.3rem solid #ff6600;
-    /* Cambiar el color del borde en hover */
 }
 
 .navbar-links a.active {
     color: black;
-    /* Color cuando está activo */
     border-bottom: 0.3rem solid black;
-    /* Mantiene el borde activo */
 }
 
-/* Color de hover para los enlaces cuando el navbar está en scroll */
 .navbar-scrolled .navbar-links a:hover {
     color: black;
-    /* Negro al pasar el mouse */
     border-bottom: .3rem solid #000000;
 }
 
-/* Media Queries para dispositivos pequeños (pantallas menores a 768px) */
 @media (max-width: 768px) {
 
     .navbar {
-        display: flex;
         justify-content: space-between;
         width: 100vw;
     }
@@ -158,10 +127,9 @@
         border: none;
     }
 
-     /* Estilo para los enlaces seleccionados en móviles */
      .navbar-links a.active {
         background-color: #ff6600;
-        color: black; /* Texto negro cuando está activo */
+        color: black;
         border: none;
     }
 
@@ -171,7 +139,6 @@
     }
 }
 
-/* Asegurarse de que el botón hamburguesa no se muestre en pantallas grandes */
 @media (min-width: 769px) {
     .navbar-toggle {
         display: none;
@@ -180,55 +147,31 @@
 
 @media (max-width: 480px) {
     .navbar {
-        padding: 0.8rem; /* Reducir el espacio de la navbar */
-        width: 100vw;
+        padding: 0.8rem;
     }
 
     .navbar-toggle {
-        font-size: 1.2rem; /* Hacer el icono de la hamburguesa más pequeño */
+        font-size: 1.2rem;
     }
 
     .navbar-links a {
-        font-size: 16px; /* Reducir el tamaño de fuente de los enlaces */
-        padding: 0.8rem; /* Ajustar el padding para que sea más compacto */
-    }
-
-    .navbar-links a:hover {
-        background-color: #ff6600;
-        color: white;
-    }
-
-    /* Ajuste de los enlaces activos en móviles pequeños */
-    .navbar-links a.active {
-        background-color: #ff6600;
-        color: black;
+        font-size: 16px;
+        padding: 0.8rem;
     }
 }
 
 @media (max-width: 360px) {
 
     .navbar {
-        padding: 0.6rem; /* Asegurar que la navbar sea más compacta */
-        width: 100vw;
+        padding: 0.6rem;
     }
 
     .navbar-toggle {
-        font-size: 1rem; /* Hacer que el icono de la hamburguesa sea aún más pequeño */
+        font-size: 1rem;
     }
 
     .navbar-links a {
-        font-size: 14px; /* Ajustar el tamaño de fuente de los enlaces para pantallas pequeñas */
-        padding: 0.6rem; /* Reducir aún más el padding */
-    }
-
-    .navbar-links a:hover {
-        background-color: #ff6600;
-        color: white;
-    }
-
-    /* Ajuste de los enlaces activos */
-    .navbar-links a.active {
-        background-color: #ff6600;
-        color: black;
+        font-size: 14px;
+        padding: 0.6rem;
     }
 }

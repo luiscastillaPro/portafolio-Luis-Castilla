@@ -1,5 +1,4 @@
 .home-container {
-    /* Ajusta según sea necesario */
     padding-top: 27vh;
 }
 
@@ -14,27 +13,21 @@
     border: 1px solid rgb(105, 105, 105);
     animation: slideIn 1s ease forwards;
     opacity: 0;
-    /* Inicialmente invisible */
 }
 
 .home-contai.fade-in {
     opacity: 1;
-    /* Cuando la clase está activa, el elemento se vuelve visible */
 }
 
 @keyframes slideIn {
     0% {
         transform: translateX(-10%) scale(0.9);
-        /* Empieza fuera de la pantalla a la izquierda y más pequeño */
         opacity: 0;
-        /* Totalmente transparente */
     }
 
     100% {
         transform: translateX(0) scale(1);
-        /* Termina en su posición original y tamaño normal */
         opacity: 1;
-        /* Totalmente visible */
     }
 }
 
@@ -42,8 +35,11 @@
 .home-texto {
     color: white;
     font-family: "DM Serif Display", serif;
-    font-size: 2rem;
     line-height: 45px;
+}
+
+.home-texto{
+    font-size: 2rem;
 }
 
 .home-titulo {
@@ -63,7 +59,6 @@
 .home-con1 p,
 .home-con1 h2 {
     display: inline;
-    /* Asegura que ambos estén en la misma línea */
 }
 
 .home-bienvenido {
@@ -77,26 +72,18 @@
 }
 
 .home-con1 {
-    width: 600px;
-    height: auto;
+    max-width: 600px;
 }
 
 .home-con2 {
     background: linear-gradient(to right, #ff7e29, #ff2600);
     width: 320px;
-    /* Ancho del contenedor */
     height: 320px;
-    /* Alto del contenedor */
     border-radius: 50%;
-    /* Hace que el contenedor sea circular */
     display: flex;
-    /* Usar flexbox para centrar la imagen */
     justify-content: center;
-    /* Centrar horizontalmente */
     align-items: center;
-    /* Centrar verticalmente */
     overflow: hidden;
-    /* Ocultar cualquier parte de la imagen que sobresalga */
     animation: float 2s ease-in-out infinite;
     box-shadow: 0 0 20px rgba(255, 126, 41, 2);
 }
@@ -104,17 +91,14 @@
 @keyframes float {
     0% {
         transform: translateY(0);
-        /* Posición inicial */
     }
 
     50% {
         transform: translateY(-10px);
-        /* Sube 10 píxeles */
     }
 
     100% {
         transform: translateY(0);
-        /* Vuelve a la posición inicial */
     }
 }
 
@@ -125,44 +109,29 @@
 
 .contact-button {
     background: linear-gradient(to right, #ff7e29, #ff2600);
-    /* Color naranja brillante */
     color: white;
-    /* Color del texto */
     border: none;
-    /* Sin borde */
     border-radius: 30px;
-    /* Bordes redondeados */
     padding: 8px 20px;
-    /* Espaciado interno */
     font-size: 1rem;
-    /* Tamaño de la fuente */
     transition: background-color 0.3s ease;
-    /* Transición suave para el color de fondo */
     font-weight: 600;
 }
 
-/* Efecto al pasar el mouse */
 .contact-button:hover {
     background-color: black;
-    /* Un tono más oscuro al pasar el mouse */
     color: black;
     box-shadow: 0 0 15px rgba(255, 126, 41, 2);
-    /* Sombra blanca */
 }
 
-/* Estilos iniciales del ícono de descarga */
 .download-icon,
 .user-icon {
     opacity: 0;
-    /* Invisible al inicio */
     transform: translateX(13px);
-    /* Posicionado ligeramente a la izquierda */
     transition: opacity 0.5s ease, transform 0.6s ease;
-    /* Transición suave */
     margin-left: 5px;
 }
 
-/* Efecto al hacer hover */
 .contact-button:hover .download-icon,
 .contact-button:hover .user-icon {
     opacity: 1;
@@ -172,92 +141,48 @@
 .cursor {
     font-weight: bold;
     color: #ff6600;
-    /* El mismo color naranja */
     animation: blink 1s step-end infinite;
-    /* Añade una animación para parpadeo */
     font-size: 2.5rem;
 }
 
 .foto-perfil {
     width: 100%;
-    /* Ocupa el 100% del ancho del contenedor */
     height: 100%;
-    /* Ocupa el 100% del alto del contenedor */
     object-fit: cover;
-    /* Asegura que la imagen cubra el contenedor sin distorsionarse */
     border-radius: 50%;
-    /* Opcional: hace que la imagen sea circular */
     margin: 27px 0 0 35px;
 }
 
 .home-redes {
     display: flex;
-    /* Para que los iconos se alineen horizontalmente */
     justify-content: center;
-    /* Espacio uniforme entre los iconos */
     margin-top: 2rem;
-    /* Espacio entre el contenido y los iconos */
 }
 
 .icon-container {
     border-radius: 50%;
-    /* Hace que el contenedor sea circular */
     display: flex;
-    /* Para centrar la imagen */
     justify-content: center;
-    /* Centrar horizontalmente */
     align-items: center;
-    /* Centrar verticalmente */
     width: 40px;
-    /* Ajusta el tamaño según sea necesario */
     height: 40px;
-    /* Ajusta el tamaño según sea necesario */
     margin: 0 10px;
-    /* Espacio entre los iconos */
     transition: transform 0.3s;
-    /* Transición suave al escalar */
 }
 
-/* Animación de giro de 360 grados y aumento de tamaño */
-@keyframes spin {
-    0% {
-        transform: rotate(0deg) scale(1);
-        /* Sin transformación */
-    }
-
-    50% {
-        transform: rotate(180deg) scale(1.4);
-        /* Aumenta un poco de tamaño en el medio */
-    }
-
-    100% {
-        transform: rotate(360deg) scale(1);
-        /* Regresa al tamaño original */
-    }
-}
-
-
-/* Aplicar la animación al hover */
 .icon-container:hover {
     animation: spin 0.3s linear;
-    /* 0.6s es la duración del giro */
 }
-
-
 
 .redes-icono {
     color: rgb(221, 221, 221);
-    /* Color negro para el icono */
     border-radius: 50%;
     font-size: 2.5rem;
 }
 
 .redes-icono:hover {
     color: #ff6600;
-    /* Color negro para el icono */
-    border-radius: 50%;
     background: rgba(255, 255, 255, 0);
-    font-size: 2.5rem;
 }
 
 .home-intro {
@@ -279,76 +204,61 @@
     transform: translateY(0);
 }
 
-/* Estilos para el icono de desplazamiento hacia abajo */
-.scroll-indicator {
+.scroll-indicator, .scroll-indicator-educacion, .scroll-indicator-skills, .scroll-indicator-proyectos {
     display: flex;
     justify-content: center;
-    /* Centrar horizontalmente */
     align-items: center;
-    /* Centrar verticalmente */
 }
 
-.scroll-indicator-educacion {
-    display: flex;
-    justify-content: center;
-    /* Centrar horizontalmente */
-    align-items: center;
-    /* Centrar verticalmente */
+.scroll-indicator{
+    margin-top: 5rem;
 }
 
 .scroll-indicator-skills {
-    display: flex;
-    justify-content: center;
-    /* Centrar horizontalmente */
-    align-items: center;
-    /* Centrar verticalmente */
     margin-top: 3rem;
-    /* Espacio encima del icono */
 }
 
 .scroll-indicator-proyectos {
-    display: flex;
-    justify-content: center;
-    /* Centrar horizontalmente */
-    align-items: center;
-    /* Centrar verticalmente */
     margin-top: 5rem;
-    /* Espacio encima del icono */
 }
 
 .down-arrow {
     color: white;
-    /* Color blanco para el icono */
     font-size: 2rem;
-    /* Tamaño del icono */
     animation: bounce 1s infinite;
-    /* Añadir animación de rebote */
-}
-
-@keyframes bounce {
-
-    0%,
-    100% {
-        transform: translateY(0);
-        /* Posición inicial */
-    }
-
-    50% {
-        transform: translateY(-10px);
-        /* Rebote hacia arriba */
-    }
 }
 
 .button-group {
     display: flex;
-    /* Coloca los botones en fila */
     gap: 1rem;
-    /* Espacio entre los botones */
     margin-top: 2rem;
-    /* Ajusta según sea necesario */
 }
 
-/* Media Query para pantallas pequeñas */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(180deg) scale(1.4);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+@keyframes bounce {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
 @media (max-width: 768px) {
     .home-contai {
         flex-direction: column;
@@ -367,33 +277,20 @@
 
     .home-con1 {
         width: 100%;
-        /* Hace que .home-con1 ocupe todo el ancho disponible */
         text-align: center;
         margin-top: 2rem;
-        /* Espacio superior */
         order: 2;
-        /* Hace que .home-con1 se muestre después de .home-con2 */
     }
 
     .home-con2 {
         width: 250px;
-        /* Ajusta el tamaño de la imagen */
         height: 250px;
-        /* Ajusta el tamaño de la imagen */
         margin-top: 2rem;
         order: 1;
-        /* Hace que .home-con2 se muestre antes de .home-con1 */
-    }
-
-    .foto-perfil {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
     }
 
     .home-titulo {
         font-size: 2.5rem;
-        /* Reducir tamaño en pantallas pequeñas */
     }
 
     .home-full {
@@ -403,20 +300,17 @@
 
     .contact-button {
         font-size: 1rem;
-        /* Reducir tamaño de los botones */
         padding: 8px 16px;
     }
 
     .home-intro {
         font-size: 0.9rem;
-        /* Reducir tamaño del texto de introducción */
         margin-top: 1rem;
         margin-bottom: 0;
     }
 
     .home-redes {
         margin-top: 1rem;
-        /* Espacio ajustado entre los iconos sociales */
     }
 
     .cursor {

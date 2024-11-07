@@ -26,7 +26,6 @@ const Contacto = () => {
         event.preventDefault();
         setShowConfirmation(true);
 
-        // Limpiar los campos del formulario
         setFormData({
             nombre: "",
             email: "",
@@ -34,7 +33,6 @@ const Contacto = () => {
             mensaje: ""
         });
 
-        // Ocultar el mensaje después de unos segundos
         setTimeout(() => {
             setShowConfirmation(false);
         }, 5000);
