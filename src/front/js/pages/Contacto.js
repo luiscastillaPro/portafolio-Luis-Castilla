@@ -35,7 +35,7 @@ const Contacto = () => {
 
         setTimeout(() => {
             setShowConfirmation(false);
-        }, 5000);
+        }, 8000);
     };
 
     const handleChange = (event) => {

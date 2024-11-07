@@ -196,3 +196,9 @@
     }
 }
 
+@media (max-width: 400px) {
+    .contact-detail{
+        font-size: 1.2rem;
+    }
+}
+
