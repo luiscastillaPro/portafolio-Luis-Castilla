@@ -145,6 +145,18 @@
     transform: translateX(0);
 }
 
+@media (max-width: 855px) {
+
+    .skills-table{
+        justify-content: left;
+    }
+
+    .skill-item {
+        width: 90px;
+        height: 110px;
+    }
+}
+
 @media (max-width: 768px) {
     .skills-content {
         flex-direction: column;
@@ -191,5 +203,18 @@
     .skill-item {
         width: 80px;
         height: 100px;
+    }
+}
+
+@media (max-width: 390px) {
+
+    .skills-table{
+        justify-content: left;
+        gap: 10px;
+    }
+
+    .skill-item {
+        width: 70px;
+        height: 90px;
     }
 }
